@@ -22,20 +22,22 @@
     var CONFIG = {"hostname":"kcp28.github.io","root":"/","scheme":"Muse","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="盒子模型（框模型 box model）  浏览器渲染页面时，它会将页面中的每一个元素都想象成是一个矩形的盒子。 想象成盒子之后，布局问题就转换成如何摆放盒子的问题。  每一个盒子从内到外都有以下几部分组成。(以下几部分默认值为0)  内容区(content):放子元素的地方 内边距(padding):内容区到边框之间的距离 边框(border) 外边距(margin):盒子之间的距离  cont">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://kcp28.github.io/2020/08/10/hello-world/index.html">
+<meta property="og:title" content="css布局">
+<meta property="og:url" content="https://kcp28.github.io/2020/08/16/css%E5%B8%83%E5%B1%80/index.html">
 <meta property="og:site_name" content="&amp;">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="盒子模型（框模型 box model）  浏览器渲染页面时，它会将页面中的每一个元素都想象成是一个矩形的盒子。 想象成盒子之后，布局问题就转换成如何摆放盒子的问题。  每一个盒子从内到外都有以下几部分组成。(以下几部分默认值为0)  内容区(content):放子元素的地方 内边距(padding):内容区到边框之间的距离 边框(border) 外边距(margin):盒子之间的距离  cont">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-10T09:37:16.702Z">
-<meta property="article:modified_time" content="2020-08-10T09:37:16.702Z">
+<meta property="og:image" content="https://kcp28.github.io/2020/08/16/css%E5%B8%83%E5%B1%80/01border.png">
+<meta property="article:published_time" content="2020-08-16T05:17:53.000Z">
+<meta property="article:modified_time" content="2020-08-17T06:32:30.915Z">
 <meta property="article:author" content="Lxy">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kcp28.github.io/2020/08/16/css%E5%B8%83%E5%B1%80/01border.png">
 
 
-<link rel="canonical" href="https://kcp28.github.io/2020/08/10/hello-world/">
+<link rel="canonical" href="https://kcp28.github.io/2020/08/16/css%E5%B8%83%E5%B1%80/">
 
 
 <script class="page-configurations">
@@ -48,7 +50,7 @@
   };
 </script>
 
-  <title>Hello World | &</title>
+  <title>css布局 | &</title>
   
 
 
@@ -153,7 +155,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -165,7 +167,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -221,7 +222,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kcp28.github.io/2020/08/10/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://kcp28.github.io/2020/08/16/css%E5%B8%83%E5%B1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -237,7 +238,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          css布局
         </h1>
 
         <div class="post-meta">
@@ -247,7 +248,23 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-10 17:37:16" itemprop="dateCreated datePublished" datetime="2020-08-10T17:37:16+08:00">2020-08-10</time>
+              <time title="创建时间：2020-08-16 13:17:53" itemprop="dateCreated datePublished" datetime="2020-08-16T13:17:53+08:00">2020-08-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-17 14:32:30" itemprop="dateModified" datetime="2020-08-17T14:32:30+08:00">2020-08-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+                </span>
             </span>
 
           
@@ -259,19 +276,52 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <ul>
+<li><p>盒子模型（框模型 box model）</p>
+<ul>
+<li><p>浏览器渲染页面时，它会将页面中的每一个元素都想象成是一个矩形的盒子。</p>
+<p>想象成盒子之后，布局问题就转换成如何摆放盒子的问题。</p>
+</li>
+<li><p>每一个盒子从内到外都有以下几部分组成。(以下几部分默认值为0)</p>
+<ul>
+<li>内容区(content):放子元素的地方</li>
+<li>内边距(padding):内容区到边框之间的距离</li>
+<li>边框(border)</li>
+<li>外边距(margin):盒子之间的距离</li>
+</ul>
+<p><span style="color:#345"><em>content、padding、border决定了盒子的大小</em></span></p>
+<p><span style="color:#345"><em>padding决定了盒子的位置</em></span></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>width、height:默认情况下，width和height设置的是<strong>内容区</strong>的宽高。</p>
+</li>
+<li><p>border：边框，是盒子的边界，出了边框就是盒子外部。边框会影响盒子的可见框大小，算盒子大小时需要算上边框。</p>
+<ul>
+<li><p>边框相关的3个样式：</p>
+<ul>
+<li>border-color  边框颜色(设置规则和border-width一样)</li>
+<li>border-style  边框样式  (实线:solid)</li>
+<li>border-width  边框宽度  <ol>
+<li>分别指定四个方向的宽度:上,右,下,左  (顺时针)</li>
+<li>三个值：上,左右,下</li>
+<li>二个值：上下,左右</li>
+<li>一个值：上下左右</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>注意:当边框十分宽时，四个方向交叉的是一个45度的斜线，每个方向是一个梯形</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">        div&#123;</span><br><span class="line"><span class="css">            <span class="selector-tag">width</span><span class="selector-pseudo">:100px</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">height</span><span class="selector-pseudo">:100px</span>;</span></span><br><span class="line">            border-style: solid;</span><br><span class="line">            border-width: 155px;</span><br><span class="line">            border-color: red green orange blue;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<img src="/2020/08/16/css%E5%B8%83%E5%B1%80/01border.png" class="" title="border example">
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+</li>
+</ul>
+</li>
+</ul>
 
     </div>
 
@@ -285,11 +335,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2020/08/15/css%E5%9F%BA%E7%A1%80/" rel="prev" title="css基础——选择器">
+                  <i class="fa fa-chevron-left"></i> css基础——选择器
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/08/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" rel="next" title="第一篇博客">
-                  第一篇博客 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
