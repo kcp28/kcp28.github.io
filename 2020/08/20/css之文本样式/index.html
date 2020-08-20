@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"kcp28.github.io","root":"/","scheme":"Pisces","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
+  </script>
+
+  <meta name="description" content="text-align  用来设置文本水平对齐方式。可选值：  left  默认  靠左对齐 right   靠右对齐 center   居中对齐 justify   两端对齐  通过调整空格大小，使得左右都对齐   vertical-align  设置文本垂直对齐方式。  可选值：  baseline   基线对齐  top    元素顶端与父元素顶端对齐  bottom    元素底部与父元素">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css之文本样式">
+<meta property="og:url" content="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/index.html">
+<meta property="og:site_name" content="&amp;">
+<meta property="og:description" content="text-align  用来设置文本水平对齐方式。可选值：  left  默认  靠左对齐 right   靠右对齐 center   居中对齐 justify   两端对齐  通过调整空格大小，使得左右都对齐   vertical-align  设置文本垂直对齐方式。  可选值：  baseline   基线对齐  top    元素顶端与父元素顶端对齐  bottom    元素底部与父元素">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/01.png">
+<meta property="og:image" content="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/02.png">
+<meta property="og:image" content="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/03.png">
+<meta property="article:published_time" content="2020-08-20T07:54:17.000Z">
+<meta property="article:modified_time" content="2020-08-20T08:58:30.035Z">
+<meta property="article:author" content="Lxy">
+<meta property="article:tag" content="css">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/01.png">
+
+
+<link rel="canonical" href="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>css之文本样式 | &</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">&</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Lxy</p>
+  <div class="site-description" itemprop="description">I will be with you forever &.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Lxy">
+      <meta itemprop="description" content="I will be with you forever &.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="&">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          css之文本样式
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-08-20 15:54:17 / 修改时间：16:58:30" itemprop="dateCreated datePublished" datetime="2020-08-20T15:54:17+08:00">2020-08-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">前端基础笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <ul>
+<li><p>text-align  用来设置文本水平对齐方式。可选值：</p>
+<ul>
+<li>left  默认  靠左对齐</li>
+<li>right   靠右对齐</li>
+<li>center   居中对齐</li>
+<li>justify   两端对齐  通过调整空格大小，使得左右都对齐</li>
+</ul>
+</li>
+<li><p>vertical-align  设置文本垂直对齐方式。</p>
+<ul>
+<li><p>可选值：</p>
+<ul>
+<li><p>baseline   基线对齐</p>
+</li>
+<li><p>top    元素顶端与父元素顶端对齐</p>
+</li>
+<li><p>bottom    元素底部与父元素底部对齐</p>
+</li>
+<li><p>super  上标</p>
+<a id="more"></a>
+</li>
+<li><p>sub   下标</p>
+</li>
+<li><p>middle  居中对齐（这个有点向下）</p>
+</li>
+<li><p>数值  1.像素值   2.百分比（相对于行高计算）总之：正值往上调整，负值往下调整</p>
+</li>
+</ul>
+</li>
+<li><p>用处：当一个div包一个img图片时，图片和div最下端不是紧挨着，会有个缝，这是由于图片默认是按字体基线对齐的方式对齐的,会把div撑高。想要去掉这个缝，法一：设置div中<code>font-size:0;</code> 法二：将图片垂直对齐设置为bottom<code>vertical-align:bottom;</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">    div&#123;</span><br><span class="line">        background-color: red;</span><br><span class="line"><span class="css">        <span class="selector-tag">border</span><span class="selector-pseudo">:1px</span> <span class="selector-tag">solid</span> <span class="selector-tag">blue</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">    img&#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./bg.jpg&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>默认情况下，div和图片底部之间有个缝：<img src="/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/01.png" class="" title="有缝"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid blue;</span><br><span class="line">    <span class="comment">/*设置字体大小为0，这样处理有风险，不建议*/</span></span><br><span class="line">    <span class="comment">/*font-size: 0px;*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">img</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="comment">/*给图片设置垂直对齐方式*/</span></span><br><span class="line">    <span class="attribute">vertical-align</span>: bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>设置垂直对齐方式后，没有缝了：<img src="/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/02.png" class="" title="没缝"></p>
+</li>
+</ul>
+</li>
+<li><p>text_decoration   设置文本修饰。语法：text_decoration: 类型  线形   颜色；</p>
+<ul>
+<li>类型可选值：<ul>
+<li>underline   下划线</li>
+<li>line-through   删除线</li>
+<li>overline  上划线</li>
+<li>none  没有线</li>
+</ul>
+</li>
+<li>线形可选值：<ul>
+<li>solid  默认  实线</li>
+<li>double  双下划线</li>
+<li>dotted  点状线</li>
+<li>dashed  虚线</li>
+<li>wavy  波浪线</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>text-indent   首行缩进</p>
+<ul>
+<li><code>text-indent:40px;</code>  缩进40px   （正数向左缩进，负数向右缩进。也可用这种方式隐藏元素）</li>
+<li><code>text-indent:2em;</code>  缩进2个字</li>
+</ul>
+</li>
+<li><p>white-space  如何处理空白内容。可选值：</p>
+<ul>
+<li>normal   默认，正常自动换行</li>
+<li>nowrap  不换行</li>
+<li>pre   保留文本编辑时的格式（空格、换行都保留了）</li>
+</ul>
+</li>
+<li><p>text-overflow  如何处理溢出的文本。可选值：</p>
+<ul>
+<li>ellipsis   使用省略号来表示溢出内容</li>
+</ul>
+<p>容器一行显示不了所有字，设置字不换行，超出容器多余的部分用省略号表示：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">    p&#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        background-color: green;</span><br><span class="line"><span class="css">        <span class="comment">/*设置文字不换行*/</span></span></span><br><span class="line">        white-space: nowrap;</span><br><span class="line"><span class="css">        <span class="comment">/*隐藏溢出的内容*/</span></span></span><br><span class="line">        overflow: hidden;</span><br><span class="line"><span class="css">        <span class="comment">/*设置用省略号代替溢出文本*/</span></span></span><br><span class="line">        text-overflow: ellipsis;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这里有好多好多好多的字<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果：<img src="/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/03.png" class=""></p>
+</li>
+<li><p>letter-spacing   字母间距   值越大，间距越大</p>
+</li>
+<li><p>word-spacing   单词间距    值越大，间距越大</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/css/" rel="tag"># css</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/08/19/css%E4%B9%8B%E5%AD%97%E4%BD%93/" rel="prev" title="css之字体">
+                  <i class="fa fa-chevron-left"></i> css之字体
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lxy</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+      
+
+
+
+
+
+
+
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
