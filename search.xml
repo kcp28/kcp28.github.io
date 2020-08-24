@@ -101,6 +101,106 @@
       </tags>
   </entry>
   <entry>
+    <title>css之动画</title>
+    <url>/2020/08/24/css%E4%B9%8B%E5%8A%A8%E7%94%BB/</url>
+    <content><![CDATA[<p>动画：可以通过动画实现一些更复杂的交互效果。要实现css动画，必需要先设置关键帧。</p>
+<ul>
+<li><p>@keyframes   用来设置关键帧</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 关键帧名称 &#123;</span><br><span class="line">  <span class="comment">/* from指定动画开始的位置，相当于0%*/</span>  </span><br><span class="line">    <span class="selector-tag">from</span>&#123;&#125;</span><br><span class="line">    <span class="comment">/*to指定动画结束的位置，相当于100%*/</span></span><br><span class="line">    <span class="selector-tag">to</span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<p>关键帧中用百分比指定动画每一时刻的位置：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 关键帧名称 &#123;</span><br><span class="line">    0%,50%&#123;&#125;</span><br><span class="line">    <span class="comment">/*to指定动画结束的位置，相当于100%*/</span></span><br><span class="line">    20%,100%&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>需要在执行动画的元素上，设置动画细节。用animation相关属性来实现。</p>
+<ul>
+<li><p>animation-name  指定动画的名称  </p>
+</li>
+<li><p>animation-duration   指定动画的持续时间</p>
+</li>
+<li><p>animation-delay   指定动画的延迟</p>
+</li>
+<li><p>animation-timing-function  指定动画的时间函数（ease、linear、steps…）</p>
+</li>
+<li><p>animation-iteration-count  指定动画执行的次数  </p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*动画执行无限次,即动画循环执行*/</span></span><br><span class="line"><span class="selector-tag">animation-iteration-count</span><span class="selector-pseudo">:infinite</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<p>例子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="keyword">@keyframes</span> a1 &#123;</span></span><br><span class="line">            from&#123;</span><br><span class="line">                background-position: 0 0;</span><br><span class="line">            &#125;</span><br><span class="line">            to&#123;</span><br><span class="line">                background-position: 1536px 0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.box1</span>&#123;</span></span><br><span class="line">            height: 256px;</span><br><span class="line"><span class="css">            <span class="comment">/*calc()是一个可以计算px值的函数，要带单位*/</span></span></span><br><span class="line">            width: calc(1536px / 6);</span><br><span class="line">            background-image: url(./img/bg2.png);</span><br><span class="line">            animation-name: a1;</span><br><span class="line">            animation-duration: 5s;</span><br><span class="line">            animation-timing-function: steps(6,end);</span><br><span class="line">            animation-iteration-count: infinite;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>animation-play-state  动画的播放状态。可选值：<ul>
+<li>paused  动画暂停</li>
+<li>running  动画运行（默认）</li>
+</ul>
+</li>
+<li>animation-direction  动画运动的方向。可选值：<ul>
+<li>normal  默认，动画从0%-100%执行</li>
+<li>reverse  反转执行，动画从100%-0%执行</li>
+<li>alternate  0%-100%-0%</li>
+<li>alternate-reverse  100%-0%-100%</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端基础笔记</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css之变形</title>
+    <url>/2020/08/24/css%E4%B9%8B%E5%8F%98%E5%BD%A2/</url>
+    <content><![CDATA[<p>变形：transform  可以通过变形对元素进行平移、旋转、放大、缩小拉伸等操作，即改变元素的形状、位置、大小、角度等。</p>
+<ul>
+<li><p>transform  变形,变形不会影响布局。可选值：</p>
+<ul>
+<li><p>translate()  水平/垂直/前后移动</p>
+<ul>
+<li><p>translateX()   沿x轴方向平移  元素水平移动（负往左，正往右）</p>
+</li>
+<li><p>translateY()   沿y轴方向平移  元素垂直移动（负往上，正往下）</p>
+<p>括号中填移动的偏移量，偏移量可以是具体的像素值，也可以是百分比。百分比是相对自己的宽度高度计算的。</p>
+<a id="more"></a>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--绝对定位元素宽高不定时水平垂直居中（IE9及以上）--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.box1</span>&#123;</span></span><br><span class="line">        width: 500px;</span><br><span class="line">        height: 500px;</span><br><span class="line">        position: relative;</span><br><span class="line">        margin: 0 auto;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.box2</span>&#123;</span></span><br><span class="line">        position: absolute;</span><br><span class="line"><span class="css">        <span class="selector-tag">background-color</span>: <span class="selector-id">#aad</span>;    </span></span><br><span class="line"><span class="css">        <span class="comment">/*元素左端对齐到父元素中线上*/</span></span></span><br><span class="line">        left: 50%;</span><br><span class="line"><span class="css">        <span class="comment">/*元素上端对齐到父元素中线上*/</span></span></span><br><span class="line"><span class="css">        <span class="selector-tag">top</span><span class="selector-pseudo">:50</span>%;</span></span><br><span class="line"><span class="css">        <span class="comment">/*让元素向左移（上移）自己宽度（高度）的一半，实现水平（垂直）居中*/</span></span></span><br><span class="line"><span class="css">        <span class="comment">/*transform:translateX(-50%) translateY    (-50%);*/</span></span></span><br><span class="line">        transform: translate(-50%,-50%);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box2&quot;</span>&gt;</span>aaadddddddddddddddddd<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>translateZ()   沿z轴方向平移  元素距离人的距离 (x,y,z轴遵守左手法则)</p>
+<p>默认情况下，浏览器显示不出来该属性，因为浏览器不支持近大远小。要显示效果需要先设置视距。</p>
+<p>视距 perspective,即人的眼睛和网页之间的距离，最好设置在800px~1000px之间。一般在html元素中设置：        </p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;</span><br><span class="line">    <span class="attribute">perspective</span>:<span class="number">800px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>rotate()  旋转  （开视距有效果）</p>
+<ul>
+<li>rotateX()   沿X轴旋转 <code> transform: rotateX(90deg);/*沿x轴旋转90度*/</code></li>
+<li>rotateY()   沿Y轴旋转 <code> transform: rotateY(90deg);/*沿y轴旋转90度*/</code></li>
+<li>rotateZ()   沿Z轴旋转 <code> transform: rotateZ(90deg);/*沿z轴旋转90度,看起来是沿着中心转*/</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>transform-style  设置变形时效果</p>
+<p><code>transform-style:preserve-3d;</code>  设置变形时3d效果</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端基础笔记</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css之字体</title>
     <url>/2020/08/19/css%E4%B9%8B%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<ul>
@@ -837,43 +937,6 @@
       </tags>
   </entry>
   <entry>
-    <title>css之轮廓和阴影</title>
-    <url>/2020/08/18/css%E4%B9%8B%E8%BD%AE%E5%BB%93%E5%92%8C%E9%98%B4%E5%BD%B1/</url>
-    <content><![CDATA[<p>轮廓和阴影是css3新增的一个内容</p>
-<ul>
-<li><p>轮廓  outline</p>
-<ul>
-<li>轮廓就是不占空间的边框，设置轮廓不会影响元素的布局</li>
-<li>语法：<code>outline: 1px solid red;</code></li>
-</ul>
-</li>
-<li><p>阴影 box-shadow</p>
-<ul>
-<li>阴影和轮廓一样，不会影响元素布局</li>
-<li>语法：box-shadow:[inset] 水平偏移量  垂直偏移量  模糊半径  颜色；</li>
-<li>值：<ul>
-<li>inset  内部阴影（写上表示该阴影是内部阴影）</li>
-<li>1.第一个值，阴影的水平偏移量。正值向右移动，负值向左移动</li>
-<li>2.第二个值，阴影的垂直偏移量。正值向下移动，负值向上移动</li>
-<li>3.第三个值，阴影的模糊半径。</li>
-<li>4.第四个值，阴影的颜色。</li>
-</ul>
-</li>
-<li>多层阴影：设置多组值，每组之间用 ‘ , ’隔开。</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">5px</span> <span class="number">3px</span> <span class="number">4px</span> <span class="number">#123</span>;<span class="comment">/*单层阴影*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box2</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">0px</span> <span class="number">0px</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">12</span>,<span class="number">34</span>,<span class="number">55</span>,.<span class="number">3</span>);<span class="comment">/*四周都设阴影*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box3</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">5px</span> <span class="number">3px</span> <span class="number">4px</span> <span class="number">#123</span>,</span><br><span class="line">        <span class="number">8px</span> <span class="number">5px</span> <span class="number">4px</span> <span class="number">#223</span>,</span><br><span class="line">        <span class="number">10px</span> <span class="number">7px</span> <span class="number">4px</span> <span class="number">#323</span>;<span class="comment">/*多层阴影*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>前端基础笔记</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>css之背景</title>
     <url>/2020/08/21/css%E4%B9%8B%E8%83%8C%E6%99%AF/</url>
     <content><![CDATA[<ul>
@@ -952,6 +1015,110 @@
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>前端基础笔记</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css之轮廓和阴影</title>
+    <url>/2020/08/18/css%E4%B9%8B%E8%BD%AE%E5%BB%93%E5%92%8C%E9%98%B4%E5%BD%B1/</url>
+    <content><![CDATA[<p>轮廓和阴影是css3新增的一个内容</p>
+<ul>
+<li><p>轮廓  outline</p>
+<ul>
+<li>轮廓就是不占空间的边框，设置轮廓不会影响元素的布局</li>
+<li>语法：<code>outline: 1px solid red;</code></li>
+</ul>
+</li>
+<li><p>阴影 box-shadow</p>
+<ul>
+<li>阴影和轮廓一样，不会影响元素布局</li>
+<li>语法：box-shadow:[inset] 水平偏移量  垂直偏移量  模糊半径  颜色；</li>
+<li>值：<ul>
+<li>inset  内部阴影（写上表示该阴影是内部阴影）</li>
+<li>1.第一个值，阴影的水平偏移量。正值向右移动，负值向左移动</li>
+<li>2.第二个值，阴影的垂直偏移量。正值向下移动，负值向上移动</li>
+<li>3.第三个值，阴影的模糊半径。</li>
+<li>4.第四个值，阴影的颜色。</li>
+</ul>
+</li>
+<li>多层阴影：设置多组值，每组之间用 ‘ , ’隔开。</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">5px</span> <span class="number">3px</span> <span class="number">4px</span> <span class="number">#123</span>;<span class="comment">/*单层阴影*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box2</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">0px</span> <span class="number">0px</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">12</span>,<span class="number">34</span>,<span class="number">55</span>,.<span class="number">3</span>);<span class="comment">/*四周都设阴影*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box3</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">5px</span> <span class="number">3px</span> <span class="number">4px</span> <span class="number">#123</span>,</span><br><span class="line">        <span class="number">8px</span> <span class="number">5px</span> <span class="number">4px</span> <span class="number">#223</span>,</span><br><span class="line">        <span class="number">10px</span> <span class="number">7px</span> <span class="number">4px</span> <span class="number">#323</span>;<span class="comment">/*多层阴影*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端基础笔记</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css之过渡</title>
+    <url>/2020/08/24/css%E4%B9%8B%E8%BF%87%E6%B8%A1/</url>
+    <content><![CDATA[<p>过渡，可以使一个属性的值经过一段时间变成另一个值。过渡相关的属性：</p>
+<ul>
+<li><p>transition-property   指定要过渡的属性，可以同时指定多个值，多个值之间用“ , ”隔开。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*指定width、height属性过渡*/</span></span><br><span class="line"><span class="selector-tag">transition-property</span><span class="selector-pseudo">:width</span>,<span class="selector-tag">height</span>;</span><br><span class="line"><span class="comment">/*所有属性都指定过渡*/</span></span><br><span class="line"><span class="selector-tag">transition-property</span><span class="selector-pseudo">:all</span>;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+</li>
+<li><p>transition-duration   过渡持续时间 </p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*过渡时间单位：s 秒 ；ms 毫秒（注意时间不宜过长）*/</span></span><br><span class="line"><span class="selector-tag">transition-property</span><span class="selector-pseudo">:2s</span>;</span><br><span class="line"><span class="comment">/*为各属性分开指定过渡时间*/</span></span><br><span class="line"><span class="selector-tag">transition-property</span><span class="selector-pseudo">:2s</span>,50<span class="selector-tag">ms</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>transition-delay  延迟过渡</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">transition-delay</span><span class="selector-pseudo">:2s</span><span class="comment">/*延迟2s后开始过渡*/</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>transition-timing-function   指定过渡时间函数。可选值：</p>
+<ul>
+<li><p>ease  慢-快-慢    默认</p>
+</li>
+<li><p>linear  匀速</p>
+</li>
+<li><p>ease-in  慢-快</p>
+</li>
+<li><p>ease-out  快-慢</p>
+</li>
+<li><p>ease-in-out  先加速后减速</p>
+</li>
+<li><p>steps(n,end/start): n 表示分n步。start:开始就动   end：时间结束时动</p>
+</li>
+<li><p>可以通过贝塞尔曲线来指定元素的运动方式。<code>cubic-bezier(p1,p2,p3,p4)</code>(<a href="https://cubic-bezier.com/">https://cubic-bezier.com</a>)</p>
+<p><code>transition-timing-function:cubic-bezier(.46,1.21,.86,1.61);</code></p>
+</li>
+</ul>
+</li>
+<li><p>transition  过渡相关的简写属性。</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--过渡demo--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.box1</span>&#123;</span></span><br><span class="line">        height: 100px;</span><br><span class="line">        width: 100px;</span><br><span class="line">        background-color: red;</span><br><span class="line">        transition-property: all;</span><br><span class="line">        transition-duration: 2s;</span><br><span class="line">        transition-timing-function: ease-in-out;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.box1</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line">        height: 200px;</span><br><span class="line">        width: 200px;</span><br><span class="line">        background-color: purple;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span>鼠标放上看效果<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>demo效果：</p>
+<style type="text/css">
+    .box1{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        transition-property: all;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+
+}
+.box1:hover{
+    height: 200px;
+    width: 200px;
+    background-color: purple;
+}
+
+</style>
+
+<div class="box1">鼠标放上看效果</div>]]></content>
       <categories>
         <category>前端基础笔记</category>
       </categories>
@@ -1187,8 +1354,24 @@
 </li>
 <li><p>隐藏的文本框  <code>&lt;input type=&quot;hidden&quot; /&gt;</code></p>
 </li>
-<li><p>表单项name属性：当指定name属性后，表单才会提交该表单项的值。表单中的数据默认情况下，都是以查询字符串(query string)的形式发送给服务器的。</p>
-<p>查询字符串：如  username=abc&amp;password=123456。</p>
+<li><p>表单项属性</p>
+<ul>
+<li><p>name：当指定name属性后，表单才会提交该表单项的值。表单中的数据默认情况下，都是以查询字符串(query string)的形式发送给服务器的。查询字符串：如  username=abc&amp;password=123456。</p>
+</li>
+<li><p>autofocus   自动获取焦点  <code>&lt;input type=&quot;text&quot; autofocus \&gt;</code></p>
+</li>
+<li><p>required  必填项  <code>&lt;input type=&quot;text&quot; required \&gt;</code></p>
+</li>
+<li><p>value  指定表单项的值  <code>&lt;input type=&quot;text&quot; value=&quot;XXX&quot; \&gt;</code></p>
+</li>
+<li><p>readonly   只读属性  <code>&lt;input type=&quot;text&quot; readonly \&gt;</code></p>
+</li>
+<li><p>disabled   禁用表单项  <code>&lt;input type=&quot;text&quot; disabled \&gt;</code></p>
+</li>
+<li><p>autocomplete  自动填写，默认值是on,即开启自动填写(autocomplete=”on”)。  </p>
+<p>关闭自动填写：<code>&lt;input type=&quot;text&quot; autocomplete=&quot;off&quot; \&gt;</code></p>
+</li>
+</ul>
 </li>
 </ul>
 ]]></content>

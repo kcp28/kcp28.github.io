@@ -22,21 +22,21 @@
     var CONFIG = {"hostname":"kcp28.github.io","root":"/","scheme":"Pisces","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="轮廓和阴影是css3新增的一个内容  轮廓  outline  轮廓就是不占空间的边框，设置轮廓不会影响元素的布局 语法：outline: 1px solid red;   阴影 box-shadow  阴影和轮廓一样，不会影响元素布局 语法：box-shadow:[inset] 水平偏移量  垂直偏移量  模糊半径  颜色； 值： inset  内部阴影（写上表示该阴影是内部阴影） 1.第一个值">
+  <meta name="description" content="动画：可以通过动画实现一些更复杂的交互效果。要实现css动画，必需要先设置关键帧。  @keyframes   用来设置关键帧 123456@keyframes 关键帧名称 &amp;#123;  &#x2F;* from指定动画开始的位置，相当于0%*&#x2F;      from&amp;#123;&amp;#125;    &#x2F;*to指定动画结束的位置，相当于100%*&#x2F;    to&amp;#123;&amp;#125;&amp;#125;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css之轮廓和阴影">
-<meta property="og:url" content="https://kcp28.github.io/2020/08/18/css%E4%B9%8B%E8%BD%AE%E5%BB%93%E5%92%8C%E9%98%B4%E5%BD%B1/index.html">
+<meta property="og:title" content="css之动画">
+<meta property="og:url" content="https://kcp28.github.io/2020/08/24/css%E4%B9%8B%E5%8A%A8%E7%94%BB/index.html">
 <meta property="og:site_name" content="&amp;">
-<meta property="og:description" content="轮廓和阴影是css3新增的一个内容  轮廓  outline  轮廓就是不占空间的边框，设置轮廓不会影响元素的布局 语法：outline: 1px solid red;   阴影 box-shadow  阴影和轮廓一样，不会影响元素布局 语法：box-shadow:[inset] 水平偏移量  垂直偏移量  模糊半径  颜色； 值： inset  内部阴影（写上表示该阴影是内部阴影） 1.第一个值">
+<meta property="og:description" content="动画：可以通过动画实现一些更复杂的交互效果。要实现css动画，必需要先设置关键帧。  @keyframes   用来设置关键帧 123456@keyframes 关键帧名称 &amp;#123;  &#x2F;* from指定动画开始的位置，相当于0%*&#x2F;      from&amp;#123;&amp;#125;    &#x2F;*to指定动画结束的位置，相当于100%*&#x2F;    to&amp;#123;&amp;#125;&amp;#125;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-18T03:31:02.000Z">
-<meta property="article:modified_time" content="2020-08-19T09:32:13.922Z">
+<meta property="article:published_time" content="2020-08-24T07:56:37.000Z">
+<meta property="article:modified_time" content="2020-08-24T10:57:20.192Z">
 <meta property="article:author" content="Lxy">
 <meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://kcp28.github.io/2020/08/18/css%E4%B9%8B%E8%BD%AE%E5%BB%93%E5%92%8C%E9%98%B4%E5%BD%B1/">
+<link rel="canonical" href="https://kcp28.github.io/2020/08/24/css%E4%B9%8B%E5%8A%A8%E7%94%BB/">
 
 
 <script class="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>css之轮廓和阴影 | &</title>
+  <title>css之动画 | &</title>
   
 
 
@@ -260,7 +260,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kcp28.github.io/2020/08/18/css%E4%B9%8B%E8%BD%AE%E5%BB%93%E5%92%8C%E9%98%B4%E5%BD%B1/">
+    <link itemprop="mainEntityOfPage" href="https://kcp28.github.io/2020/08/24/css%E4%B9%8B%E5%8A%A8%E7%94%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -276,7 +276,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          css之轮廓和阴影
+          css之动画
         </h1>
 
         <div class="post-meta">
@@ -285,16 +285,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-08-18 11:31:02" itemprop="dateCreated datePublished" datetime="2020-08-18T11:31:02+08:00">2020-08-18</time>
+              <time title="创建时间：2020-08-24 15:56:37 / 修改时间：18:57:20" itemprop="dateCreated datePublished" datetime="2020-08-24T15:56:37+08:00">2020-08-24</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-19 17:32:13" itemprop="dateModified" datetime="2020-08-19T17:32:13+08:00">2020-08-19</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -314,30 +308,48 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>轮廓和阴影是css3新增的一个内容</p>
+        <p>动画：可以通过动画实现一些更复杂的交互效果。要实现css动画，必需要先设置关键帧。</p>
 <ul>
-<li><p>轮廓  outline</p>
-<ul>
-<li>轮廓就是不占空间的边框，设置轮廓不会影响元素的布局</li>
-<li>语法：<code>outline: 1px solid red;</code></li>
-</ul>
-</li>
-<li><p>阴影 box-shadow</p>
-<ul>
-<li>阴影和轮廓一样，不会影响元素布局</li>
-<li>语法：box-shadow:[inset] 水平偏移量  垂直偏移量  模糊半径  颜色；</li>
-<li>值：<ul>
-<li>inset  内部阴影（写上表示该阴影是内部阴影）</li>
-<li>1.第一个值，阴影的水平偏移量。正值向右移动，负值向左移动</li>
-<li>2.第二个值，阴影的垂直偏移量。正值向下移动，负值向上移动</li>
-<li>3.第三个值，阴影的模糊半径。</li>
-<li>4.第四个值，阴影的颜色。</li>
-</ul>
-</li>
-<li>多层阴影：设置多组值，每组之间用 ‘ , ’隔开。</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">5px</span> <span class="number">3px</span> <span class="number">4px</span> <span class="number">#123</span>;<span class="comment">/*单层阴影*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box2</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">0px</span> <span class="number">0px</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">12</span>,<span class="number">34</span>,<span class="number">55</span>,.<span class="number">3</span>);<span class="comment">/*四周都设阴影*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box3</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">5px</span> <span class="number">3px</span> <span class="number">4px</span> <span class="number">#123</span>,</span><br><span class="line">        <span class="number">8px</span> <span class="number">5px</span> <span class="number">4px</span> <span class="number">#223</span>,</span><br><span class="line">        <span class="number">10px</span> <span class="number">7px</span> <span class="number">4px</span> <span class="number">#323</span>;<span class="comment">/*多层阴影*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>@keyframes   用来设置关键帧</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 关键帧名称 &#123;</span><br><span class="line">  <span class="comment">/* from指定动画开始的位置，相当于0%*/</span>  </span><br><span class="line">    <span class="selector-tag">from</span>&#123;&#125;</span><br><span class="line">    <span class="comment">/*to指定动画结束的位置，相当于100%*/</span></span><br><span class="line">    <span class="selector-tag">to</span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
+
+<p>关键帧中用百分比指定动画每一时刻的位置：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 关键帧名称 &#123;</span><br><span class="line">    0%,50%&#123;&#125;</span><br><span class="line">    <span class="comment">/*to指定动画结束的位置，相当于100%*/</span></span><br><span class="line">    20%,100%&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>需要在执行动画的元素上，设置动画细节。用animation相关属性来实现。</p>
+<ul>
+<li><p>animation-name  指定动画的名称  </p>
+</li>
+<li><p>animation-duration   指定动画的持续时间</p>
+</li>
+<li><p>animation-delay   指定动画的延迟</p>
+</li>
+<li><p>animation-timing-function  指定动画的时间函数（ease、linear、steps…）</p>
+</li>
+<li><p>animation-iteration-count  指定动画执行的次数  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*动画执行无限次,即动画循环执行*/</span></span><br><span class="line"><span class="selector-tag">animation-iteration-count</span><span class="selector-pseudo">:infinite</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<p>例子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="keyword">@keyframes</span> a1 &#123;</span></span><br><span class="line">            from&#123;</span><br><span class="line">                background-position: 0 0;</span><br><span class="line">            &#125;</span><br><span class="line">            to&#123;</span><br><span class="line">                background-position: 1536px 0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.box1</span>&#123;</span></span><br><span class="line">            height: 256px;</span><br><span class="line"><span class="css">            <span class="comment">/*calc()是一个可以计算px值的函数，要带单位*/</span></span></span><br><span class="line">            width: calc(1536px / 6);</span><br><span class="line">            background-image: url(./img/bg2.png);</span><br><span class="line">            animation-name: a1;</span><br><span class="line">            animation-duration: 5s;</span><br><span class="line">            animation-timing-function: steps(6,end);</span><br><span class="line">            animation-iteration-count: infinite;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>animation-play-state  动画的播放状态。可选值：<ul>
+<li>paused  动画暂停</li>
+<li>running  动画运行（默认）</li>
+</ul>
+</li>
+<li>animation-direction  动画运动的方向。可选值：<ul>
+<li>normal  默认，动画从0%-100%执行</li>
+<li>reverse  反转执行，动画从100%-0%执行</li>
+<li>alternate  0%-100%-0%</li>
+<li>alternate-reverse  100%-0%-100%</li>
+</ul>
 </li>
 </ul>
 
@@ -356,13 +368,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/08/16/css%E4%B9%8B%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%AD%89/" rel="prev" title="css之盒子模型、边框、内外边距">
-                  <i class="fa fa-chevron-left"></i> css之盒子模型、边框、内外边距
+                <a href="/2020/08/24/css%E4%B9%8B%E8%BF%87%E6%B8%A1/" rel="prev" title="css之过渡">
+                  <i class="fa fa-chevron-left"></i> css之过渡
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/08/18/css%E4%B9%8B%E6%B5%AE%E5%8A%A8/" rel="next" title="css之浮动">
-                  css之浮动 <i class="fa fa-chevron-right"></i>
+                <a href="/2020/08/24/css%E4%B9%8B%E5%8F%98%E5%BD%A2/" rel="next" title="css之变形">
+                  css之变形 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
