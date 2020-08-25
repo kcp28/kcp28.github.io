@@ -179,17 +179,36 @@
 </li>
 </ul>
 </li>
-<li><p>rotate()  旋转  （开视距有效果）</p>
+<li><p>rotate()  旋转  </p>
 <ul>
 <li>rotateX()   沿X轴旋转 <code> transform: rotateX(90deg);/*沿x轴旋转90度*/</code></li>
 <li>rotateY()   沿Y轴旋转 <code> transform: rotateY(90deg);/*沿y轴旋转90度*/</code></li>
 <li>rotateZ()   沿Z轴旋转 <code> transform: rotateZ(90deg);/*沿z轴旋转90度,看起来是沿着中心转*/</code></li>
 </ul>
 </li>
+<li><p>scale()  缩放（只在2d平面有效）</p>
+<ul>
+<li>scaleX()   沿X轴缩放<code>transform:scaleX(1.2);/*沿X轴缩放1.2倍*/</code></li>
+<li>scaleY()   沿Y轴缩放<code>transform:scaleX(2);/*沿Y轴缩放2倍*/</code></li>
+</ul>
+</li>
+<li><p>skew()  倾斜</p>
+<ul>
+<li>skewX()   X方向倾斜<code>transform:skewX(90deg);/*X轴方向倾斜90度*/</code></li>
+<li>skewY()   Y方向倾斜<code>transform:skewY(45deg);/*Y轴方向倾斜45度*/</code></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>transform-style  设置变形时效果</p>
 <p><code>transform-style:preserve-3d;</code>  设置变形时3d效果</p>
+</li>
+<li><p>transform-origin  指定变形的原点。可选值：top/bottom;left/right/center</p>
+<ul>
+<li>center    中心  默认</li>
+<li>top left  左上角</li>
+<li>50px 50px  </li>
+</ul>
 </li>
 </ul>
 ]]></content>
