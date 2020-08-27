@@ -225,7 +225,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -325,7 +325,6 @@
         <p>渐变不是颜色，是图片。我们需要通过 <code>background-image</code>或<code>background</code>设置渐变的效果。</p>
 <p>渐变有两种：1.linear-gradient() 线性渐变  2.radial-gradient() 径向渐变</p>
 <a id="more"></a>
-
 <ul>
 <li><p>linear-gradient 线性渐变</p>
 <ul>
@@ -337,7 +336,7 @@
 <p>to left  或  90deg    自右向左</p>
 <p>to right     自左向右</p>
 <p>to right top  从左下到右上<br>to left bottom  从右上到左下…</p>
-<p><code>background-image:linear-gradient(red,yellow); </code></p>
+<p><code>background-image:linear-gradient(red,yellow);</code></p>
 <p>默认情况，效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/1.png" class=""></p>
 <p><code>background-image:linear-gradient(to right top,red,yellow);</code></p>
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/2.png" class=""></p>
@@ -346,15 +345,12 @@
 </li>
 <li><p>默认情况下，渐变颜色是平均分配的。可以在颜色后，指定颜色的范围.语法： 开始位置  结束位置（注意这种语法兼容性不好）</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*0-20px位置颜色是red,80-100px是黄色，20-80px之间渐变*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 0 20<span class="selector-tag">px</span>,<span class="selector-tag">yellow</span> 80<span class="selector-tag">px</span> 100<span class="selector-tag">px</span>);</span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/4.png" class=""></p>
 </li>
 <li><p>颜色后边可以指定一个长度(px或百分比)，用来指定颜色的起始位置：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*0-10px位置颜色是red,70px以下开始是黄色，10-70px之间渐变*/</span>  </span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 10<span class="selector-tag">px</span>,<span class="selector-tag">yellow</span> 70<span class="selector-tag">px</span>); </span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/5.png" class="">          </p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*位置也可以是百分比，相对于该元素的高度*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 20%,<span class="selector-tag">yellow</span> 60%); </span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/6.png" class=""></p>
 </li>
 <li><p>repeating-linear-gradient  重复现象渐变</p>
@@ -365,21 +361,18 @@
 </li>
 <li><p>radial-gradient()  径向渐变</p>
 <p>该渐变默认上下左右对称。渐变默认形状是根据元素形状来的：元素是方块的，渐变是圆形的；元素是长方形，渐变是椭圆形的。</p>
-<p><code> background-image:radial-gradient(#abc,skyblue,blue);</code></p>
+<p><code>background-image:radial-gradient(#abc,skyblue,blue);</code></p>
 <p>默认情况，效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/8.png" class=""></p>
 <ul>
 <li><p>设置渐变的形状：<br>设置圆形的径向渐变：<code>background-image:radial-gradient(circle,#abc,skyblue,blue);</code></p>
 <p>设置椭圆形的径向渐变：<code>background-image:radial-gradient(ellipse,#abc,skyblue,blue);</code><br>设置渐变的宽高(单位px):<code>background-image:radial-gradient(宽 高,#abc,skyblue,blue);</code></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(50px</span> 80<span class="selector-tag">px</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/9.png" class=""></p>
 </li>
 <li><p>设置渐变中心的位置：at 横向位置  垂直位置 （横向：top/bottom  垂直：left/center/right  也可以写具体的像素值）</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*渐变的中心在上方中间*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(at</span> <span class="selector-tag">top</span> <span class="selector-tag">center</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/10.png" class=""></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*渐变的中心距左边30px，距上边50px*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(at</span> 30<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/11.png" class=""></p>
 </li>
 <li><p>调整渐变的范围：</p>
@@ -508,6 +501,8 @@
 
 
 
+
+  
 
   
 

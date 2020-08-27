@@ -3,7 +3,7 @@
   <entry>
     <title>HTML简介</title>
     <url>/2020/08/11/HTML%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[<!DOCTYPE html>
+    <content><![CDATA[<p>&lt;!DOCTYPE html&gt;</p>
 <ul>
 <li>文档声明，告诉浏览器网页的版本</li>
 </ul>
@@ -27,7 +27,6 @@
 <li>span:span标签是一个文本标签，但它没有语义。主要作用就是选中文中。</li>
 </ul>
 <a id="more"></a>
-
 <ul>
 <li><p>img:图片标签，用来引入外部图片</p>
 <ul>
@@ -58,7 +57,6 @@
 </li>
 <li><p>video:视频标签，用法和audio一样</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">    对不起，该浏览器不支持该标签</span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;视频1.mp4&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;视频1.webm&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">embed</span> <span class="attr">src</span>=<span class="string">&quot;视频1.mp4&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--embed是用来兼容ie8的，其它情况不推荐使用。type属性用来指定资源类型--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--开发时，我们一般不把视频资源放在本地服务器上，</span></span><br><span class="line"><span class="comment">因为1.视频太大，占用内存较多 2.在线播放占用较大的带宽。如果购买的服务器，则这样会产生较大的费用。</span></span><br><span class="line"><span class="comment">方法1:我们可以购买专门放视频的平台的服务器，把视频放在这些平台上，平台返回视频的链接，我们用video引用该链接来引入自己的视频。</span></span><br><span class="line"><span class="comment">方法2：把视频放在优酷、腾讯等视频平台上，用iframe标签引入。写个人博客用这个方法还行，否则不推荐使用，因为视频样式等不好控制。</span></span><br><span class="line"><span class="comment">在视频网站分享-&gt;复制通用地址-&gt;在自己html中引入</span></span><br><span class="line"><span class="comment">&lt;iframe frameborder=&quot;0&quot; src=&quot;https://v.qq.com/txp/iframe/player.html?vid=d0034k9roij&quot; allowFullScreen=&quot;true&quot;&gt;&lt;/iframe&gt;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>==像img、iframe、video、audio等，这些标签属于替换元素。==</p>
 </li>
 <li><p>a:超链接。用于跳转页面。</p>
@@ -66,7 +64,6 @@
 <li>href:跳转的url 。</li>
 </ul>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--回到顶部，#表示页面顶部--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>回到顶部<span class="tag">&lt;/<span class="name">a</span>&gt;</span>  </span><br><span class="line"><span class="comment">&lt;!--回到某个元素所在位置，需要给该元素设置id属性。--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#bottom&quot;</span>&gt;</span>回到顶部<span class="tag">&lt;/<span class="name">a</span>&gt;</span>  <span class="comment">&lt;!--跳转到id为bottom的元素的位置--&gt;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>target：可以设置是否在新页面打开链接。可选值：<ul>
 <li>_self:默认值，在当前窗口打开网页</li>
@@ -87,7 +84,6 @@
 <li>dd描述定义项</li>
 </ul>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dt</span>&gt;</span>HTML<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dd</span>&gt;</span>HTML负责网页结构<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 </li>
@@ -107,9 +103,7 @@
 <ul>
 <li><p>@keyframes   用来设置关键帧</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 关键帧名称 &#123;</span><br><span class="line">  <span class="comment">/* from指定动画开始的位置，相当于0%*/</span>  </span><br><span class="line">    <span class="selector-tag">from</span>&#123;&#125;</span><br><span class="line">    <span class="comment">/*to指定动画结束的位置，相当于100%*/</span></span><br><span class="line">    <span class="selector-tag">to</span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <a id="more"></a>
-
 <p>关键帧中用百分比指定动画每一时刻的位置：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 关键帧名称 &#123;</span><br><span class="line">    0%,50%&#123;&#125;</span><br><span class="line">    <span class="comment">/*to指定动画结束的位置，相当于100%*/</span></span><br><span class="line">    20%,100%&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -125,14 +119,12 @@
 </li>
 <li><p>animation-iteration-count  指定动画执行的次数  </p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*动画执行无限次,即动画循环执行*/</span></span><br><span class="line"><span class="selector-tag">animation-iteration-count</span><span class="selector-pseudo">:infinite</span>;</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 </li>
 </ul>
 <p>例子：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="keyword">@keyframes</span> a1 &#123;</span></span><br><span class="line">            from&#123;</span><br><span class="line">                background-position: 0 0;</span><br><span class="line">            &#125;</span><br><span class="line">            to&#123;</span><br><span class="line">                background-position: 1536px 0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.box1</span>&#123;</span></span><br><span class="line">            height: 256px;</span><br><span class="line"><span class="css">            <span class="comment">/*calc()是一个可以计算px值的函数，要带单位*/</span></span></span><br><span class="line">            width: calc(1536px / 6);</span><br><span class="line">            background-image: url(./img/bg2.png);</span><br><span class="line">            animation-name: a1;</span><br><span class="line">            animation-duration: 5s;</span><br><span class="line">            animation-timing-function: steps(6,end);</span><br><span class="line">            animation-iteration-count: infinite;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>animation-play-state  动画的播放状态。可选值：<ul>
 <li>paused  动画暂停</li>
@@ -169,7 +161,6 @@
 <li><p>translateY()   沿y轴方向平移  元素垂直移动（负往上，正往下）</p>
 <p>括号中填移动的偏移量，偏移量可以是具体的像素值，也可以是百分比。百分比是相对自己的宽度高度计算的。</p>
 <a id="more"></a>
-
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--绝对定位元素宽高不定时水平垂直居中（IE9及以上）--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.box1</span>&#123;</span></span><br><span class="line">        width: 500px;</span><br><span class="line">        height: 500px;</span><br><span class="line">        position: relative;</span><br><span class="line">        margin: 0 auto;</span><br><span class="line">        background-color: red;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.box2</span>&#123;</span></span><br><span class="line">        position: absolute;</span><br><span class="line"><span class="css">        <span class="selector-tag">background-color</span>: <span class="selector-id">#aad</span>;    </span></span><br><span class="line"><span class="css">        <span class="comment">/*元素左端对齐到父元素中线上*/</span></span></span><br><span class="line">        left: 50%;</span><br><span class="line"><span class="css">        <span class="comment">/*元素上端对齐到父元素中线上*/</span></span></span><br><span class="line"><span class="css">        <span class="selector-tag">top</span><span class="selector-pseudo">:50</span>%;</span></span><br><span class="line"><span class="css">        <span class="comment">/*让元素向左移（上移）自己宽度（高度）的一半，实现水平（垂直）居中*/</span></span></span><br><span class="line"><span class="css">        <span class="comment">/*transform:translateX(-50%) translateY    (-50%);*/</span></span></span><br><span class="line">        transform: translate(-50%,-50%);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box2&quot;</span>&gt;</span>aaadddddddddddddddddd<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>translateZ()   沿z轴方向平移  元素距离人的距离 (x,y,z轴遵守左手法则)</p>
@@ -181,9 +172,9 @@
 </li>
 <li><p>rotate()  旋转  </p>
 <ul>
-<li>rotateX()   沿X轴旋转 <code> transform: rotateX(90deg);/*沿x轴旋转90度*/</code></li>
-<li>rotateY()   沿Y轴旋转 <code> transform: rotateY(90deg);/*沿y轴旋转90度*/</code></li>
-<li>rotateZ()   沿Z轴旋转 <code> transform: rotateZ(90deg);/*沿z轴旋转90度,看起来是沿着中心转*/</code></li>
+<li>rotateX()   沿X轴旋转 <code>transform: rotateX(90deg);/*沿x轴旋转90度*/</code></li>
+<li>rotateY()   沿Y轴旋转 <code>transform: rotateY(90deg);/*沿y轴旋转90度*/</code></li>
+<li>rotateZ()   沿Z轴旋转 <code>transform: rotateZ(90deg);/*沿z轴旋转90度,看起来是沿着中心转*/</code></li>
 </ul>
 </li>
 <li><p>scale()  缩放（只在2d平面有效）</p>
@@ -226,29 +217,23 @@
 <li>响应式左右布局</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.outer</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">width</span><span class="selector-pseudo">:80</span>%;</span></span><br><span class="line"><span class="css">        <span class="comment">/*设置最小宽度*/</span></span></span><br><span class="line">        min-width: 800px;</span><br><span class="line"><span class="css">        <span class="comment">/* height: 500px; */</span></span></span><br><span class="line">        margin: 0 auto;</span><br><span class="line">        background-color: rgb(255, 170, 188);</span><br><span class="line"><span class="css">        <span class="comment">/* 开启bfc，解决子元素浮动，父元素高度塌陷的问题 */</span></span></span><br><span class="line">        overflow: hidden;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.left</span>&#123;</span></span><br><span class="line">        width: 20%;</span><br><span class="line">        height: 500px; </span><br><span class="line">        background-color: rgb(102, 212, 148);</span><br><span class="line">        float: left;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.right</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">width</span><span class="selector-pseudo">:80</span>%;</span></span><br><span class="line">        height: 500px; </span><br><span class="line">        background-color: rgb(29, 30, 94);</span><br><span class="line">        float: left; </span><br><span class="line">    &#125; </span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;left&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <a id="more"></a>
-
 <ul>
 <li>左侧固定右侧自适应</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.outer</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">width</span><span class="selector-pseudo">:80</span>%;</span></span><br><span class="line"><span class="css">        <span class="comment">/* height: 500px; */</span></span></span><br><span class="line">        margin: 0 auto;</span><br><span class="line">        background-color: rgb(255, 170, 188);</span><br><span class="line"><span class="css">        <span class="comment">/* 开启bfc，解决子元素浮动，父元素高度塌陷的问题 */</span></span></span><br><span class="line">        overflow: hidden;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.left</span>&#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 500px; </span><br><span class="line">        background-color: rgb(102, 212, 148);</span><br><span class="line">        float: left;</span><br><span class="line"><span class="css">        <span class="comment">/* 使用margin移动元素位置 */</span></span></span><br><span class="line"><span class="css">        <span class="selector-tag">margin-left</span><span class="selector-pseudo">:-100</span>%;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.right</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">width</span><span class="selector-pseudo">:100</span>%;</span></span><br><span class="line">        height: 500px; </span><br><span class="line">        background-color: rgb(117, 118, 206);</span><br><span class="line">        float: left; </span><br><span class="line">    &#125; </span><br><span class="line"><span class="css">    <span class="selector-class">.right_inner</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="comment">/* 不设置宽度，宽度就是auto，会根据margin大小改变。二者相加大小始终等于父元素 */</span></span></span><br><span class="line">        margin-left: 200px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;right_inner&quot;</span>&gt;</span></span><br><span class="line">                 右侧的主要内容</span><br><span class="line">             <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;left&quot;</span>&gt;</span>左侧菜单<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>左右固定中间自适应</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.outer</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">width</span><span class="selector-pseudo">:90</span>%;</span></span><br><span class="line"><span class="css">        <span class="comment">/* 指定最小宽度，防止中间变得很小 */</span></span></span><br><span class="line">        min-width: 650px;</span><br><span class="line"><span class="css">        <span class="selector-tag">margin</span><span class="selector-pseudo">:0</span> <span class="selector-tag">auto</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background-color</span>: <span class="selector-id">#bfa</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.main</span>&#123;</span></span><br><span class="line">        width: 100%;</span><br><span class="line">        height: 500px;</span><br><span class="line">        background-color: rgb(245, 160, 160);</span><br><span class="line">        float: left;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.main_inner</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">margin</span><span class="selector-pseudo">:0</span> 200<span class="selector-tag">px</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.left</span>&#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 500px;</span><br><span class="line">        background-color: rgb(240, 205, 111);</span><br><span class="line">        float: left;</span><br><span class="line">        margin-left: -100%;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.right</span>&#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 500px;</span><br><span class="line">        background-color: rgb(92, 199, 218);</span><br><span class="line">        float: left;</span><br><span class="line">        margin-left: -200px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">             <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main_inner&quot;</span>&gt;</span></span><br><span class="line">                 主要内容</span><br><span class="line">             <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;left&quot;</span>&gt;</span></span><br><span class="line">             左侧菜单</span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span></span><br><span class="line">             右侧菜单</span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>左右固定中间自适应之圣杯布局</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.outer</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">width</span><span class="selector-pseudo">:90</span>%;</span></span><br><span class="line"><span class="css">        <span class="comment">/* 指定最小宽度，防止中间变得很小 */</span></span></span><br><span class="line">        min-width: 850px;</span><br><span class="line"><span class="css">        <span class="selector-tag">margin</span><span class="selector-pseudo">:0</span> <span class="selector-tag">auto</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">background-color</span>: <span class="selector-id">#bfa</span>;</span></span><br><span class="line">        position: relative;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.main</span>&#123;</span></span><br><span class="line">        height: 500px;       </span><br><span class="line">        background-color: rgb(245, 160, 160);</span><br><span class="line"><span class="css">        <span class="comment">/* 指定左右外边距，将两侧位置空出来 */</span></span></span><br><span class="line">        margin: 0 200px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.left</span>&#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 500px;</span><br><span class="line">        background-color: rgb(240, 205, 111);</span><br><span class="line"><span class="css">        <span class="comment">/* 用定位将左侧元素放到左侧 */</span></span></span><br><span class="line">        position: absolute;</span><br><span class="line">        left: 0px;</span><br><span class="line"><span class="css">        <span class="selector-tag">top</span><span class="selector-pseudo">:0</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.right</span>&#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 500px;</span><br><span class="line">        background-color: rgb(92, 199, 218);</span><br><span class="line"><span class="css">        <span class="comment">/* 用定位将右侧元素放到右侧 */</span></span></span><br><span class="line">        position: absolute;</span><br><span class="line">        right: 0;</span><br><span class="line"><span class="css">        <span class="selector-tag">top</span><span class="selector-pseudo">:0</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;left&quot;</span>&gt;</span></span><br><span class="line">            左侧菜单</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">            主要内容</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span></span><br><span class="line">            右侧菜单</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>左右固定中间自适应之现在的做法</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">     <span class="selector-class">.outer</span>&#123;</span></span><br><span class="line"><span class="css">         <span class="selector-tag">width</span><span class="selector-pseudo">:90</span>%;</span></span><br><span class="line"><span class="css">         <span class="comment">/* 指定最小宽度，防止中间变得很小 */</span></span></span><br><span class="line">         min-width: 850px;</span><br><span class="line"><span class="css">         <span class="selector-tag">margin</span><span class="selector-pseudo">:0</span> <span class="selector-tag">auto</span>;</span></span><br><span class="line"><span class="css">         <span class="selector-tag">background-color</span>: <span class="selector-id">#bfa</span>;</span></span><br><span class="line">     &#125;</span><br><span class="line"><span class="css">     <span class="selector-class">.main</span>&#123;</span></span><br><span class="line"><span class="css">         <span class="comment">/* 用公式计算宽度 不兼容ie8及以下 */</span></span></span><br><span class="line"><span class="css">         <span class="selector-tag">width</span><span class="selector-pseudo">:calc(100</span>% <span class="selector-tag">-</span> 400<span class="selector-tag">px</span>);</span></span><br><span class="line">         height: 500px;       </span><br><span class="line">         background-color: rgb(245, 160, 160);</span><br><span class="line">         float: left;</span><br><span class="line">     &#125;</span><br><span class="line"><span class="css">     <span class="selector-class">.left</span>&#123;</span></span><br><span class="line">         width: 200px;</span><br><span class="line">         height: 500px;</span><br><span class="line">         background-color: rgb(240, 205, 111);</span><br><span class="line">         float: left;</span><br><span class="line">     &#125;</span><br><span class="line"><span class="css">     <span class="selector-class">.right</span>&#123;</span></span><br><span class="line">         width: 200px;</span><br><span class="line">         height: 500px;</span><br><span class="line">         background-color: rgb(92, 199, 218);</span><br><span class="line">         float: left;</span><br><span class="line">     &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;left&quot;</span>&gt;</span></span><br><span class="line">             左侧菜单</span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">             主要内容</span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span></span><br><span class="line">             右侧菜单</span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>前端基础笔记</category>
@@ -275,8 +260,7 @@
 <li>如：Helvetica、Arial、微软雅黑</li>
 </ul>
 </li>
-<li><p>等宽字体  monospace</p>
-<ul>
+<li>等宽字体  monospace<ul>
 <li>字体等宽一样，一般用于代码或表格</li>
 <li>如：Courier New、Consolas</li>
 </ul>
@@ -289,12 +273,10 @@
 <li>用来指定字体的家族，可以指定一个字体的分类，也可以指定一个特定的字体</li>
 </ul>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:serif</span>;<span class="comment">/*指定一个字体的分类，不过这样不同浏览器可能有不同的效果*/</span></span><br><span class="line">font-family:&#x27;微软雅黑&#x27;;/*指定一个特定的字体*/</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>font-family 也可同时指定多个字体，各字体之间用 “  ，”隔开。</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:Arial</span>,华文彩云,<span class="selector-tag">serif</span>;</span><br></pre></td></tr></table></figure>
-
 <p>​    只有当计算机安装了字体才可使用，指定多个字体则如果第一种字体电脑没有，用第二种字体；第二种字体没有，用第三个。等等，以此类推。</p>
 </li>
 <li><p>font-face   (用这种方式注意版权)</p>
@@ -302,7 +284,6 @@
 <li>font-face用来引入字体，使用户的计算机即使没有该字体，浏览器也能正常显示该字体。</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span>&#123;</span><br><span class="line">    <span class="attribute">font-family</span>:<span class="string">&#x27;字体名称&#x27;</span>;<span class="comment">/*这个名称是自己起的*/</span></span><br><span class="line">    <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">&#x27;字体文件路径&#x27;</span>);<span class="comment">/*字体必需是本地的字体，在自己的服务器内*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>然后就可以在其他选择器中使用该字体：<code>font-family:&#39;字体名称&#39;;</code></p>
 </li>
 <li><p>图标字体</p>
@@ -315,7 +296,6 @@
 </li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 引入字体图标的css文件 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;./css/font-awesome.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 使用字体图标 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-camera-retro fa-lg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-lg</span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-camera-retro fa-2x&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-2x</span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-camera-retro fa-3x&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-3x</span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-camera-retro fa-4x&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-4x</span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-camera-retro fa-5x&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-5x</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>字体图标可以像字体一样使用<code>font-size</code>设置字体大小，用<code>color</code>设置颜色。字体图标再放大也不会失真。</li>
 </ul>
@@ -373,7 +353,6 @@
 </ul>
 <p>注意：行内元素不能设置宽高，它的背景高度默认是行高的字体大小的1.33倍，改变行高背景高度也不变。行内元素的border的高度，和背景高度一样默认是字体大小的1.33倍，且不会改变。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">    *&#123;</span><br><span class="line"><span class="css">        <span class="selector-tag">padding</span><span class="selector-pseudo">:0</span>;</span></span><br><span class="line">        margin: 0;</span><br><span class="line">    &#125;</span><br><span class="line">    div&#123;</span><br><span class="line">        width: 500px;</span><br><span class="line">        margin: 50px auto;</span><br><span class="line">    &#125;</span><br><span class="line">    span&#123;</span><br><span class="line">        font-size: 55px;</span><br><span class="line"><span class="css">        <span class="selector-tag">line-height</span><span class="selector-pseudo">:2</span>;</span></span><br><span class="line">        background-color: yellow;</span><br><span class="line">        border: 1px solid red;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span>&gt;</span>这是一些文字<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>效果如图：（灰线是行高，红色是边框，黄色是背景）<img src="/2020/08/19/css%E4%B9%8B%E5%AD%97%E4%BD%93/01.png" class=""></p>
 </li>
 <li><p>文字基本是在行高中居中的（看起来有点偏下）。设置文字在父元素内垂直居中：将行高设置成父元素的高度。</p>
@@ -382,30 +361,26 @@
 </li>
 </ul>
 </li>
-<li><p>字重  font-weight    字体是否加粗。可选值：</p>
-<ul>
+<li>字重  font-weight    字体是否加粗。可选值：<ul>
 <li>100-900之间的值。值越大，字越粗.(注意：200比一定比100粗，也有肯和100一样；)</li>
 <li><code>font-weight:bold;</code>   直接设置字体加粗（常用）  bold相当于700（默认是normal，相当于400）</li>
 </ul>
 </li>
-<li><p>font-style   用来设置字体的样式(斜体)。可选值：</p>
-<ul>
+<li>font-style   用来设置字体的样式(斜体)。可选值：<ul>
 <li>normal  默认 正常</li>
 <li>italic    斜体         oblique  倾斜</li>
 </ul>
 </li>
-<li><p>font-variant  字体变形。可选值：</p>
-<ul>
+<li>font-variant  字体变形。可选值：<ul>
 <li>small-caps  小型大写字母</li>
 </ul>
 </li>
-<li><p>font 字体简写属性，可以同时设置字体相关的所有样式。</p>
-<ul>
+<li>font 字体简写属性，可以同时设置字体相关的所有样式。<ul>
 <li>语法：(注意：前三个有无都行，且顺序随意。后两个必有，且顺序不变)</li>
 </ul>
 </li>
 </ul>
-<p><code>font:[font-weight] [font-style] [font-variant] font-size[/line-height] font-family;   </code></p>
+<p><code>font:[font-weight] [font-style] [font-variant] font-size[/line-height] font-family;</code></p>
 <p>​            </p>
 ]]></content>
       <categories>
@@ -439,7 +414,6 @@
 </li>
 </ul>
 <a id="more"></a>
-
 <ul>
 <li><p>定位的层级</p>
 <ul>
@@ -451,7 +425,7 @@
 </li>
 <li><p>相对定位   </p>
 <ul>
-<li>通过 <code> position:relative;</code>,将元素定位设置为相对定位。</li>
+<li>通过 <code>position:relative;</code>,将元素定位设置为相对定位。</li>
 <li>相对定位特点：<ul>
 <li>开启相对定位后，元素不会发生任何变化</li>
 <li>开启相对定位后，元素<b>不会脱离文档流</b>，</li>
@@ -476,7 +450,7 @@
 </li>
 <li><p>决对定位是相对于  <b>离他最近的 <em>开启了定位</em>  的祖先元素</b>  进行定位的。如果所有祖先元素都没有开启定位，则绝对定位相对于<code>&lt;html&gt;</code>进行定位。</p>
 <p>所以一般情况下，我们为一个元素开启了绝对定位后，会同时为它的父元素开启相对定位。</p>
-<p>总结：<b>绝对定位元素是相对于它的  <em>包含块</em>  进行定位的。</b ></p>
+<p>总结：<b>绝对定位元素是相对于它的  <em>包含块</em>  进行定位的。&lt;/b &gt;</p>
 </li>
 <li><p>开启绝对定位，会使元素提升一个层级。</p>
 </li>
@@ -543,6 +517,104 @@
       </tags>
   </entry>
   <entry>
+    <title>css之弹性盒</title>
+    <url>/2020/08/27/css%E4%B9%8B%E5%BC%B9%E6%80%A7%E7%9B%92/</url>
+    <content><![CDATA[<p>弹性盒：又名伸缩盒。弹性盒是css3种新增的一种布局方式，通过弹性盒，可以使一个盒子自动适应其容器的大小，通过弹性盒可以创造出十分灵活的布局。</p>
+<ul>
+<li><p>弹性容器   弹性元素(弹性子元素、弹性项)</p>
+<ul>
+<li><p>弹性容器：弹性元素的父元素就是弹性容器，要使用弹性盒，必需先将元素设置为弹性容器。设置弹性容器方式：</p>
+<p>1.<code>display:flex;</code>     块级弹性容器 (独占一行，宽度默认是父元素的宽)（常用）</p>
+<p>2.<code>display:inline-flex;</code>     行内弹性容器(不独占一行，宽度被内容撑开)</p>
+<a id="more"></a>
+</li>
+<li><p>弹性元素(弹性子元素、弹性项)：弹性容器内的<b>子元素</b>(孙子元素不行)就是弹性元素</p>
+</li>
+</ul>
+</li>
+<li><p>弹性容器的属性</p>
+<ul>
+<li><p>flex-direction  用来设置弹性容器的<em>主轴</em>方向（子元素是横向排列还是纵向排列）。可选值：</p>
+<ul>
+<li>row  主轴是横向的，<b>自左向右</b></li>
+<li>row-reverse  主轴是横向的，<b>自右向左</b></li>
+<li>column  主轴是纵向的，<b>自上向下</b></li>
+<li>column-reverse  主轴是纵向的，<b>自下向上</b></li>
+</ul>
+<p>弹性容器有主轴，还有辅轴(侧轴)。主轴是横向的，辅轴就是纵向的；主轴是纵向的，辅轴就是横向的。</p>
+</li>
+<li><p>flex-wrap  设置弹性容器内的弹性元素是否自动换行。可选值：</p>
+<ul>
+<li>nowrap   默认，不换行</li>
+<li>wrap   自动换行。</li>
+<li>wrap-reverse  反转换行</li>
+</ul>
+</li>
+<li><p>flex-flow  是一个简写属性，可以同时设置 flex-direction  和  flex-wrap</p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*弹性容器主轴是纵向，子元素自动换行*/</span></span><br><span class="line"><span class="selector-tag">flex-flow</span><span class="selector-pseudo">:column</span> <span class="selector-tag">wrap</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>justify-content  弹性元素在主轴上的对齐方式。可选值：<ul>
+<li>flex-start  元素沿<em>主轴的起边</em> 对齐</li>
+<li>flex-end   元素沿<em>主轴的终边</em> 对齐</li>
+<li>center  元素在主轴  中间  </li>
+<li>space-between   将空白区域平均分配到弹性元素 <em>之间</em>（容器两边相邻的弹性元素没有空白）</li>
+<li>space-around   将空白区域设置到弹性元素的前后</li>
+<li>space-evenly   将空白区域设置到弹性元素一侧。这个能保证元素之间是等距的。</li>
+<li>stretch   拉伸元素，使之在主轴方向上充满盒子。各元素拉伸的宽度相同</li>
+</ul>
+</li>
+<li>align-items  设置辅轴上元素的对齐方式。可选值<ul>
+<li>flex-start  元素沿<em>辐轴的起边</em> 对齐</li>
+<li>flex-end   元素沿<em>辐轴的终边</em> 对齐</li>
+<li>center  元素在辐轴  中间</li>
+<li>stretch   拉伸元素，使之在辅轴方向上充满盒子。各元素拉伸的宽度相同</li>
+</ul>
+</li>
+<li>align-content  设置辅轴上的空白的分布方式。可选值：<ul>
+<li>flex-start  元素沿着辅轴起边对齐（空白区域跑终边）</li>
+<li>flex-end   元素沿着主轴终边对齐（空白区域跑起边）</li>
+<li>center   元素在辅轴中间（空白区域跑到两边）</li>
+<li>space-between   将空白区域平均分配到弹性元素 <em>之间</em>（容器两边相邻的弹性元素没有空白）</li>
+<li>space-around   将空白区域设置到弹性元素的前后</li>
+<li>space-evenly   将空白区域设置到弹性元素一侧。这个能保证元素之间是等距的。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>flex-grow  用来指定弹性子元素的增长的系数（当父元素留有空白空间时，在弹性元素上设置）。值是一个数字:<code>flex-frow:1；</code></p>
+</li>
+</ul>
+<p>当子元素没有充满父元素时，即父元素留有空白时，子元素会按照自己flex-grow的值增长一定的量来充满父元素。此时，</p>
+<script type="math/tex; mode=display">
+第i个元素的增长量=父元素空白区域的量*\frac{第i个元素flex-grow的值}{\sum_{k=1}^{n}{第k个元素的flex-grow的值}}</script><p>默认情况下，子元素的flex-grow的值为0。即，默认情况下，子元素不会拉长去填充父元素。若只有1个子元素设置了flex-grow的值，则只有该元素会拉长填满空白。若都设置了flex-grow的值，且值一样，则每个子元素都会拉长去填满空白，且拉长的长度一样。</p>
+<ul>
+<li>flex-shrink  用来指定弹性子元素的收缩系数。(当父元素放不下子元素时，在弹性元素上设置)。值也是一个数字。</li>
+</ul>
+<p>每个子元素缩短多少，由子元素的flex-basis和flex-shrink共同决定。</p>
+<script type="math/tex; mode=display">
+第i个元素缩减大小=该元素的flexBasis*flexShrink*\frac{溢出的大小}{\sum_{k=1}^{n}{第k个元素的flexBasis*flexShrink}}</script><ul>
+<li>flex-basis:  指定弹性元素的标准大小，即子元素不增长不缩短的情况下，子元素的大小。如：<code>flex-basis:100px;</code></li>
+</ul>
+<p>一旦设置了这个值，则width自动失效(主轴是纵轴的话，则height失效)。默认值auto,按照弹性容器的长度来设置子元素大小。</p>
+<ul>
+<li><p>flex   简写属性(常用)，可以同时设置三个值：<code>flex:flex-grow flex-shrink flex-basis</code>  注意该属性是给弹性元素设置的。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">flex</span><span class="selector-pseudo">:1</span> 0 100<span class="selector-tag">px</span>;<span class="comment">/*flex-grow:1;flex-shrink:0;flex-basis:100px*/</span></span><br></pre></td></tr></table></figure>
+<p><code>flex:initial;</code>初始值，相当于flex:0 1 auto,所以默认情况下，子元素只会缩不会伸</p>
+<p><code>flex:auto;</code>初始值，相当于flex:1 1 auto</p>
+<p><code>flex:none;</code>初始值，相当于flex:0 0 auto</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端基础笔记</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css之文本样式</title>
     <url>/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/</url>
     <content><![CDATA[<ul>
@@ -577,10 +649,8 @@
 </li>
 <li><p>用处：当一个div包一个img图片时，图片和div最下端不是紧挨着，会有个缝，这是由于图片默认是按字体基线对齐的方式对齐的,会把div撑高。想要去掉这个缝，法一：设置div中<code>font-size:0;</code> 法二：将图片垂直对齐设置为bottom<code>vertical-align:bottom;</code></p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">    div&#123;</span><br><span class="line">        background-color: red;</span><br><span class="line"><span class="css">        <span class="selector-tag">border</span><span class="selector-pseudo">:1px</span> <span class="selector-tag">solid</span> <span class="selector-tag">blue</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">    img&#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./bg.jpg&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>默认情况下，div和图片底部之间有个缝：<img src="/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/01.png" class="" title="有缝"></p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid blue;</span><br><span class="line">    <span class="comment">/*设置字体大小为0，这样处理有风险，不建议*/</span></span><br><span class="line">    <span class="comment">/*font-size: 0px;*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">img</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="comment">/*给图片设置垂直对齐方式*/</span></span><br><span class="line">    <span class="attribute">vertical-align</span>: bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>设置垂直对齐方式后，没有缝了：<img src="/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/02.png" class="" title="没缝"></p>
 </li>
 </ul>
@@ -623,7 +693,6 @@
 </ul>
 <p>容器一行显示不了所有字，设置字不换行，超出容器多余的部分用省略号表示：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">    p&#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        background-color: green;</span><br><span class="line"><span class="css">        <span class="comment">/*设置文字不换行*/</span></span></span><br><span class="line">        white-space: nowrap;</span><br><span class="line"><span class="css">        <span class="comment">/*隐藏溢出的内容*/</span></span></span><br><span class="line">        overflow: hidden;</span><br><span class="line"><span class="css">        <span class="comment">/*设置用省略号代替溢出文本*/</span></span></span><br><span class="line">        text-overflow: ellipsis;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这里有好多好多好多的字<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/03.png" class=""></p>
 </li>
 <li><p>letter-spacing   字母间距   值越大，间距越大</p>
@@ -673,7 +742,6 @@
 </li>
 <li><p>文字不会被浮动元素遮挡，会环绕浮动元素。</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-class">.box1</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">float</span>: left;</span><br><span class="line">        <span class="attribute">background-color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.box2</span>&#123;</span><br><span class="line">        <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;box2&quot;&gt;</span><br><span class="line">        &lt;p&gt;江户时代末期，被称为“天人”的异星人来袭。地球人与天人之间的战争瞬即爆发，为数众多的武士和攘夷派志士都参与与天人的战斗。幕府见识到天人强大的实力后，擅自与天人签订不平等条约，准许他们入国。其后更颁布了“废刀令”，夺走了武士的刀。自此，天人横行霸道，幕府成为了“傀儡政权”。在这样的时代，有一个武士与同伴愉快地过着异想天开的生活。&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/18/css%E4%B9%8B%E6%B5%AE%E5%8A%A8/%E6%96%87%E5%AD%97%E4%B8%8E%E6%B5%AE%E5%8A%A8.png" class="" title="float example"></p>
 <p><em>我们可以利用浮动来实现一个文字环绕图片的效果。</em></p>
 </li>
@@ -698,7 +766,7 @@
 <li>将元素的overflow设置为非visible的值。（目前最完美的方式）visible:auto/hidden；（overflow详见<a href="/2020/08/16/css%E4%B9%8B%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%AD%89/" title="css之盒子模型、边框、内外边距">css之盒子模型、边框、内外边距</a>）</li>
 </ol>
 <p><em>总结：可以通过overflow:hidden来开启元素的BFC，从而解决子元素浮动父元素高度塌陷的问题。（谁塌，谁的overflow设置为hidden）</em></p>
-<ol start="4">
+<ol>
 <li>用clear属性清除浮动。（目前最完美的方式）</li>
 </ol>
 </li>
@@ -717,17 +785,14 @@
 <li>用伪类解决父子元素相邻垂直外边距传递</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>用伪类解决子元素浮动，父元素高度塌陷问题</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">display</span>:block;<span class="comment">/*伪元素默认为行内元素，要设置成块元素才行*/</span></span><br><span class="line">    <span class="attribute">clear</span>:both;<span class="comment">/*清除浮动*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>将以上两个写在一起，使该类能同时解决垂直外边距传递和高度塌陷问题。</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span>,<span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;<span class="comment">/*只有display为table时可以解决外边距的问题，而table形式也可解决高度塌陷的问题，所以这里display设置为table*/</span></span><br><span class="line">    <span class="attribute">clear</span>:both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>谁塌谁加clearfix类；谁被传递了垂直外边距谁加clearfix类。（一般都是父元素。）</p>
 </li>
 </ul>
@@ -745,7 +810,6 @@
     <content><![CDATA[<p>渐变不是颜色，是图片。我们需要通过 <code>background-image</code>或<code>background</code>设置渐变的效果。</p>
 <p>渐变有两种：1.linear-gradient() 线性渐变  2.radial-gradient() 径向渐变</p>
 <a id="more"></a>
-
 <ul>
 <li><p>linear-gradient 线性渐变</p>
 <ul>
@@ -757,7 +821,7 @@
 <p>to left  或  90deg    自右向左</p>
 <p>to right     自左向右</p>
 <p>to right top  从左下到右上<br>to left bottom  从右上到左下…</p>
-<p><code>background-image:linear-gradient(red,yellow); </code></p>
+<p><code>background-image:linear-gradient(red,yellow);</code></p>
 <p>默认情况，效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/1.png" class=""></p>
 <p><code>background-image:linear-gradient(to right top,red,yellow);</code></p>
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/2.png" class=""></p>
@@ -766,15 +830,12 @@
 </li>
 <li><p>默认情况下，渐变颜色是平均分配的。可以在颜色后，指定颜色的范围.语法： 开始位置  结束位置（注意这种语法兼容性不好）</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*0-20px位置颜色是red,80-100px是黄色，20-80px之间渐变*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 0 20<span class="selector-tag">px</span>,<span class="selector-tag">yellow</span> 80<span class="selector-tag">px</span> 100<span class="selector-tag">px</span>);</span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/4.png" class=""></p>
 </li>
 <li><p>颜色后边可以指定一个长度(px或百分比)，用来指定颜色的起始位置：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*0-10px位置颜色是red,70px以下开始是黄色，10-70px之间渐变*/</span>  </span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 10<span class="selector-tag">px</span>,<span class="selector-tag">yellow</span> 70<span class="selector-tag">px</span>); </span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/5.png" class="">          </p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*位置也可以是百分比，相对于该元素的高度*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 20%,<span class="selector-tag">yellow</span> 60%); </span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/6.png" class=""></p>
 </li>
 <li><p>repeating-linear-gradient  重复现象渐变</p>
@@ -785,21 +846,18 @@
 </li>
 <li><p>radial-gradient()  径向渐变</p>
 <p>该渐变默认上下左右对称。渐变默认形状是根据元素形状来的：元素是方块的，渐变是圆形的；元素是长方形，渐变是椭圆形的。</p>
-<p><code> background-image:radial-gradient(#abc,skyblue,blue);</code></p>
+<p><code>background-image:radial-gradient(#abc,skyblue,blue);</code></p>
 <p>默认情况，效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/8.png" class=""></p>
 <ul>
 <li><p>设置渐变的形状：<br>设置圆形的径向渐变：<code>background-image:radial-gradient(circle,#abc,skyblue,blue);</code></p>
 <p>设置椭圆形的径向渐变：<code>background-image:radial-gradient(ellipse,#abc,skyblue,blue);</code><br>设置渐变的宽高(单位px):<code>background-image:radial-gradient(宽 高,#abc,skyblue,blue);</code></p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(50px</span> 80<span class="selector-tag">px</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/9.png" class=""></p>
 </li>
 <li><p>设置渐变中心的位置：at 横向位置  垂直位置 （横向：top/bottom  垂直：left/center/right  也可以写具体的像素值）</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*渐变的中心在上方中间*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(at</span> <span class="selector-tag">top</span> <span class="selector-tag">center</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/10.png" class=""></p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*渐变的中心距左边30px，距上边50px*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(at</span> 30<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/11.png" class=""></p>
 </li>
 <li><p>调整渐变的范围：</p>
@@ -876,7 +934,6 @@
 </li>
 <li><p>注意:当边框十分宽时，四个方向交叉的是一个45度的斜线，每个方向是一个梯形</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">        div&#123;</span><br><span class="line"><span class="css">            <span class="selector-tag">width</span><span class="selector-pseudo">:30px</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">height</span><span class="selector-pseudo">:30px</span>;</span></span><br><span class="line">            background-color: pink;</span><br><span class="line">            border-style: solid;</span><br><span class="line">            border-width: 50px;</span><br><span class="line">            border-color: red green orange blue;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <img src="/2020/08/16/css%E4%B9%8B%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%AD%89/01border.png" class="" title="border example">
 </li>
 <li><p>简写border,同时设置四个方向边框：   border:宽度  颜色  样式；  （三个值没有顺序）</p>
@@ -899,7 +956,7 @@
 <li><p>简写：border-radius:顺时针指定值（4个值都一样可以写1个）</p>
 </li>
 <li><p>当圆角值是元素宽度的一半时，该元素变成一个圆。</p>
-<p><code>border-radius:50%;/*指定圆角值为元素宽度的一半*/  </code></p>
+<p><code>border-radius:50%;/*指定圆角值为元素宽度的一半*/</code></p>
 </li>
 </ul>
 </li>
@@ -948,20 +1005,18 @@
 <li>设置<code>margin-top:auto;margin-bottom:auto</code>使元素垂直位置上居中没用。</li>
 </ul>
 </li>
-<li><p>使用 <code>overflow </code>来设置溢出内容的处理方式。（溢出：元素内容超过父元素）可选值：</p>
+<li><p>使用 <code>overflow</code>来设置溢出内容的处理方式。（溢出：元素内容超过父元素）可选值：</p>
 <ul>
 <li><code>overflow:visible</code>  默认值，溢出内容不会被剪裁，直接在父元素外部显示。</li>
-<li><code>overflow:hidden </code> 溢出的内容会被裁剪，超过父元素的内容不会显示。</li>
+<li><code>overflow:hidden</code> 溢出的内容会被裁剪，超过父元素的内容不会显示。</li>
 <li><code>overflow:scroll</code>  生成滚动条，可以通过滚动条查看完整内容。溢出与否都有滚动条。</li>
 <li><code>overflow:auto</code>  根据需要生成滚动条。那个方向溢出，那个方向生成滚动条。</li>
 </ul>
 </li>
 <li><p>外边距的折叠</p>
 <ul>
-<li><p>垂直方向相邻的外边距，会发生外边距折叠现象。</p>
-</li>
-<li><p>兄弟间相邻的外边距</p>
-<ul>
+<li>垂直方向相邻的外边距，会发生外边距折叠现象。</li>
+<li>兄弟间相邻的外边距<ul>
 <li>两个都是<code>正值</code>时，会取两个外边距间的<code>最大值</code>。</li>
 <li>两个都是<code>负值</code>时，则取<code>绝对值大</code>的。</li>
 <li>两个外边距<code>一正一负</code>时，取<code>两个的和</code>。</li>
@@ -979,7 +1034,6 @@
 <p>法一：给父元素设置一个1px的内边距padding或border，用这个内边距或border让父子的外边距margin不再相邻，然后修改盒子大小。</p>
 <p>法二：在父子元素之间加一个table（只有table可以隔开父子元素）</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;father&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;son&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>用伪元素加table，隔开父子元素(最完美的方式):</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.father</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;<span class="comment">/*让这一部分以table的方式显示*/</span></span><br><span class="line">&#125;</span><br><span class="line">&lt;div class=&quot;father&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;son&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 </li>
@@ -1059,14 +1113,10 @@
 </li>
 </ul>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--练习：二级菜单，当鼠标移到一级菜单时显示二级菜单--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="selector-class">.inner</span>&#123;</span></span><br><span class="line">            display: none;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.outer</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.inner</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">display</span><span class="selector-pseudo">:block</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;inner&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>1.1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>1.2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>1.3<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>1.4<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;inner&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>2.1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>2.2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>2.3<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;inner&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>3.1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>3.2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>默认样式</p>
 <p>浏览器为元素设置的默认样式，不同的浏览器设置的默认样式不同。这些默认样式对开发没用，去除默认样式：</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span>;<span class="comment">/*浏览器默认8px*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">list-style</span>:none;<span class="comment">/*去除无序列表中的项目符号*/</span></span><br><span class="line">    <span class="comment">/*list-style的可选值：</span></span><br><span class="line"><span class="comment">        square:方块</span></span><br><span class="line"><span class="comment">        circle:原点</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
 </li>
 </ul>
 ]]></content>
@@ -1092,7 +1142,7 @@
 </li>
 <li><p>background-image  设置背景图片</p>
 <ul>
-<li><p>语法：<code> background-image:url(&#39;图片路径&#39;);</code> 注意：路径都是相对于当前文件的。</p>
+<li><p>语法：<code>background-image:url(&#39;图片路径&#39;);</code> 注意：路径都是相对于当前文件的。</p>
 </li>
 <li><p>注意：背景图片和背景颜色可以同时设置。这样，颜色会成为图片的底色。（开发时通常在指定背景图片的同时也指定一个背景颜色，确保图片不显示的情况下，页面也能正常看。）</p>
 <a id="more"></a>
@@ -1189,7 +1239,6 @@
 <li>多层阴影：设置多组值，每组之间用 ‘ , ’隔开。</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">5px</span> <span class="number">3px</span> <span class="number">4px</span> <span class="number">#123</span>;<span class="comment">/*单层阴影*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box2</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">0px</span> <span class="number">0px</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">12</span>,<span class="number">34</span>,<span class="number">55</span>,.<span class="number">3</span>);<span class="comment">/*四周都设阴影*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box3</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>:<span class="number">5px</span> <span class="number">3px</span> <span class="number">4px</span> <span class="number">#123</span>,</span><br><span class="line">        <span class="number">8px</span> <span class="number">5px</span> <span class="number">4px</span> <span class="number">#223</span>,</span><br><span class="line">        <span class="number">10px</span> <span class="number">7px</span> <span class="number">4px</span> <span class="number">#323</span>;<span class="comment">/*多层阴影*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 ]]></content>
@@ -1207,7 +1256,6 @@
 <ul>
 <li><p>transition-property   指定要过渡的属性，可以同时指定多个值，多个值之间用“ , ”隔开。</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*指定width、height属性过渡*/</span></span><br><span class="line"><span class="selector-tag">transition-property</span><span class="selector-pseudo">:width</span>,<span class="selector-tag">height</span>;</span><br><span class="line"><span class="comment">/*所有属性都指定过渡*/</span></span><br><span class="line"><span class="selector-tag">transition-property</span><span class="selector-pseudo">:all</span>;</span><br></pre></td></tr></table></figure>
-
 <a id="more"></a>
 </li>
 <li><p>transition-duration   过渡持续时间 </p>
@@ -1230,7 +1278,7 @@
 </li>
 <li><p>steps(n,end/start): n 表示分n步。start:开始就动   end：时间结束时动</p>
 </li>
-<li><p>可以通过贝塞尔曲线来指定元素的运动方式。<code>cubic-bezier(p1,p2,p3,p4)</code>(<a href="https://cubic-bezier.com/">https://cubic-bezier.com</a>)</p>
+<li><p>可以通过贝塞尔曲线来指定元素的运动方式。<code>cubic-bezier(p1,p2,p3,p4)</code>(<a href="https://cubic-bezier.com">https://cubic-bezier.com</a>)</p>
 <p><code>transition-timing-function:cubic-bezier(.46,1.21,.86,1.61);</code></p>
 </li>
 </ul>
@@ -1239,7 +1287,6 @@
 </li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--过渡demo--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.box1</span>&#123;</span></span><br><span class="line">        height: 100px;</span><br><span class="line">        width: 100px;</span><br><span class="line">        background-color: red;</span><br><span class="line">        transition-property: all;</span><br><span class="line">        transition-duration: 2s;</span><br><span class="line">        transition-timing-function: ease-in-out;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.box1</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line">        height: 200px;</span><br><span class="line">        width: 200px;</span><br><span class="line">        background-color: purple;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span>鼠标放上看效果<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>demo效果：</p>
 <style type="text/css">
     .box1{
@@ -1286,7 +1333,7 @@
 <li>id选择器:   #元素id{}</li>
 <li>类选择器： .类名{}</li>
 <li>选择器分组(并集选择器)：选择器1,选择器2,…,选择器n{}</li>
-<li>通配选择器：*  （如 :active{}  等价于  *:active{}）</li>
+<li>通配选择器：<em>  （如 :active{}  等价于  </em>:active{}）</li>
 <li>交集选择器：选择器1选择器2…选择器n{}  （同时满足所有选择器才选中元素）</li>
 <li>(常用)后代选择器： 祖先 后代{}</li>
 <li>子元素选择器：父元素 &gt; 子元素{}</li>
@@ -1377,9 +1424,7 @@
 <li>::before   ::after</li>
 </ul>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    ::before  <span class="comment">&lt;!--标签开头处--&gt;</span></span><br><span class="line">    文本内容</span><br><span class="line">    ::after   <span class="comment">&lt;!--标签结尾处--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight dust"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!--通过伪类在标签内容的开头处添加东西--&gt;</span></span></span><br><span class="line"><span class="xml">div::before</span><span class="template-variable">&#123;</span></span><br><span class="line"><span class="template-variable">    content:&#x27;hello&#x27; /*用css中content属性在标签开头处添加内容*/</span></span><br><span class="line"><span class="template-variable">&#125;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>::first-letter   标签文本内容中的首字母</li>
 <li>::first-line   标签文本内容的首行</li>
@@ -1477,12 +1522,10 @@
 </li>
 <li><p>单选按钮 </p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">value</span>=<span class="string">&quot;男&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">value</span>=<span class="string">&quot;女&quot;</span> <span class="attr">checked</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--实现单选功能需要把同组的单选按钮设置相同的name。--&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>checked 可以将单选按钮设置为默认选中。</p>
 </li>
 <li><p>多选按钮</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;hobby&quot;</span> <span class="attr">value</span>=<span class="string">&quot;swim&quot;</span>&gt;</span>游泳</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;hobby&quot;</span> <span class="attr">value</span>=<span class="string">&quot;run&quot;</span>&gt;</span>跑步</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;hobby&quot;</span> <span class="attr">value</span>=<span class="string">&quot;pingpang&quot;</span> <span class="attr">checked</span>&gt;</span>乒乓球</span><br></pre></td></tr></table></figure>
-
 <p>checked 可以将多选按钮设置为默认选中。</p>
 </li>
 <li><p>下拉列表</p>
@@ -1544,7 +1587,6 @@
 </li>
 </ul>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>1.1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>1.2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>2.1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>2.2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>横向合并单元格  colspan</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">&quot;2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="comment">&lt;!--这个单元格就占据2个横向单元格的位置--&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1568,7 +1610,6 @@
 <li><p>运用表格，使子块元素在父元素中垂直居中</p>
 <p>在表格的td中,运用<code>vertical-align:middle</code>使子元素居中很有效。但在div中，用该属性让元素居中就不行。所以在父元素中运用<code>display:table-cell</code>，将父元素的显示方式改编为单元格，然后再用vertical-align使子元素居中。</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"> <span class="selector-class">.father_box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="comment">/*改变父元素显示方式:让div以表格单元格的方式显示*/</span></span><br><span class="line">    <span class="attribute">display</span>: table-cell;</span><br><span class="line">    <span class="comment">/*让子元素垂直居中*/</span></span><br><span class="line">    <span class="attribute">vertical-align</span>:middle;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son_box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:green;</span><br><span class="line">    <span class="comment">/*子元素相对于父元素水平居中*/</span></span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line">&lt;div class=&quot;father_box&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;son_box&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
 <p><b>注意：在表格td中，或将display设置为table-cell时，margin会失效，但依旧可用padding</b></p>
 </li>
 </ul>
@@ -1592,26 +1633,120 @@
 </ol>
 <p>node.js中有一个NPM(node package manage 即node包管理器)，可以用npm下载安装用node编写的包、文件等。</p>
 <a id="more"></a>
-
 <p>但是存放下载资源的服务器在美国，下载速度较慢，所以用之前要配置镜像服务器，从镜像服务器上下载资源。</p>
 <ul>
 <li><p>配置淘宝的镜像服务器</p>
-<p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
+<p>npm install -g cnpm —registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a></p>
 </li>
 </ul>
-<ol start="2">
+<ol>
 <li><p>装less的编译器</p>
 <p>命令行中：npm install -g less</p>
 <p>用淘宝镜像服务器下载：cnpm install -g less</p>
 <p>安装完成后，在命令行中输入：lessc     </p>
 <p>如果没有报错，则证明less安装成功</p>
 </li>
-<li><p>less编译器使用方法：lessc xxx.less xxx.css  将xxx.less编译为xxx.css</p>
-<p>在IDE中使用插件整合less,这样就不用手动编译。在用less插件时，编译输出  .map  类型的文件，该文件是用来调试用的。</p>
-<p>在html页面还是引入 生成的css文件。</p>
-<p> <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/XXX.css&quot;&gt;</code></p>
+<li><p>less编译器使用方法</p>
 </li>
 </ol>
+<ul>
+<li>命令行中输入：lessc xxx.less xxx.css  将xxx.less编译为xxx.css</li>
+</ul>
+<p>自动编译：在IDE中使用插件整合less,这样就不用手动编译。在用less插件时，每次编译时会自动输出一个 xxx.css .map  类型的文件(可以设置输出与否)。该文件的作用时将css文件和less文件相关联，使我们可以直接调试less文件2。</p>
+<p>在html页面还是引入 生成的css文件。</p>
+<p> <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/XXX.css&quot;&gt;</code></p>
+<ul>
+<li>在网页中对less进行编译</li>
+</ul>
+<p>在页面引入less.min.js文件对less编译。此时，页面可直接引入less文件。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--引入less文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet/less&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/xxx.less&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--引入外部js文件：less.js。注意要先引入less文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;script/less.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>前端基础笔记</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>less</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>less语法</title>
+    <url>/2020/08/27/less%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<ul>
+<li>less的注释</li>
+</ul>
+<p>less的注释有两种。一种是css的多行注释 : /**/  ;  一种是less自己的多行注释：//</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*这是原版的css的注释，它里面的内容会被编译到css文件中去*/</span></span><br><span class="line"><span class="comment">//这是less的单行注释，这个里面的内容不会被编译到css文件中</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>运算</li>
+</ul>
+<p>+加法；-减法；*乘法；/除法。注意加单位，单位和数值之间不要有空格</p>
+<a id="more"></a>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">width</span>:<span class="number">100px</span>+<span class="number">100px</span>;   <span class="comment">//生成css结果是  width:200px;</span></span><br><span class="line"><span class="attribute">width</span>:<span class="number">100</span>+<span class="number">100px</span>;   <span class="comment">//生成css结果是  width:200px;</span></span><br><span class="line"><span class="attribute">width</span>:<span class="number">100</span>+<span class="number">100</span> px;   <span class="comment">//生成css结果是  width:200 px;此时css语法错误,px和数值之间不能有空格</span></span><br><span class="line"><span class="attribute">width</span>:<span class="number">2</span>*<span class="number">100</span>;   <span class="comment">//生成css结果是  width:200;此时css语法错误，没有单位</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>$样式名    直接引用指定样式的值</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">    height:$width;//height的值也是200px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此时也可以计算：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">    height:$width * .2;//height的值是200*0.2px,是40px</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>变量</p>
+<ul>
+<li>定义变量    @变量名</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@a:</span><span class="number">10px</span>;  <span class="comment">//定义变量a,并给它赋值10px</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用变量</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">width</span>:<span class="variable">@a</span>;   <span class="comment">//使用变量a,widht:10px;</span></span><br></pre></td></tr></table></figure>
+<p>命名变量时，最好采用驼峰命名法。驼峰命名法，变量名首字母小写，每一个单词的开头字母大写。</p>
+<ul>
+<li>可以将变量名的值作为选择器使用，语法：@{变量名}</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@className:</span>box1;   <span class="comment">//定义变量className,并给它赋值box1</span></span><br><span class="line"><span class="variable">@classId:</span>mybox;</span><br><span class="line"><span class="selector-class">.@&#123;className&#125;</span>&#123;&#125;   <span class="comment">//将变量className的值作为选择器使用，相当于 .box1&#123;&#125;</span></span><br><span class="line"><span class="selector-id">#@&#123;classId&#125;</span>&#123;&#125;   <span class="comment">//相当于  #mybox&#123;&#125;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>在路径中使用变量： @{变量名} </li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.@&#123;className&#125;</span>&#123;</span><br><span class="line">    <span class="attribute">background-image</span>:url(<span class="string">&#x27;@&#123;className&#125;/img/1.png&#x27;</span>);<span class="comment">//相当于box1/img/1.png</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>less变量的作用域遵循局部变量、全局变量的规则。</p>
+<ul>
+<li>把变量作为另一个变量的变量值</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="variable">@w:</span><span class="number">50px</span>;</span><br><span class="line"><span class="variable">@a:</span>w; <span class="comment">//变量a的值是变量w</span></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="variable">@@a</span>;  <span class="comment">//@a相当于w,@@a相当于@w。width:50px;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>总结：<b>1.属性作为变量：$属性名;   2.自定义变量  @变量名:值</b></p>
+<ul>
+<li>Mixins  通过Mixins可以将不同类的样式进行混合使用，复用样式(元素选择器不能被复用)</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;...&#125;</span><br><span class="line"><span class="selector-class">.box2</span>&#123;</span><br><span class="line">    <span class="selector-class">.box1</span>();  <span class="comment">//.box2中使用.box1中的内容。.box1&#123;...&#125; .box2&#123;...&#125;</span></span><br><span class="line">    <span class="selector-class">.box3</span>&#123;...&#125;<span class="comment">//.box3为.box2的后代元素，相当于 .box2 .box3&#123;...&#125;  后代选择器</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box4</span>&#123;</span><br><span class="line">    <span class="selector-class">.box2</span> <span class="selector-class">.box3</span>();  <span class="comment">//在.box4中复用.box3中定义的样式</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>定义Mixins，如果在名字后添加了  ()   ,则mixins中的样式不会被编译到css文件中去。</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.hello</span>()&#123;...&#125;  <span class="comment">//.hello不会被编译到css文件中</span></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="selector-class">.hello</span>();  <span class="comment">//复用 .hello 中定义的样式</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>定义时，可以在()中指定参数，相当于形参，具体的参数值在复用时指定：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.hello</span>(<span class="variable">@w</span>,<span class="variable">@mycolor</span>)&#123;  <span class="comment">//定义样式的同时，定义形参</span></span><br><span class="line">    <span class="attribute">width</span>:<span class="variable">@w</span>;</span><br><span class="line">    height:$width;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="variable">@mycolor</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="comment">//.hello(100px,#bfa); //使用 .hello 中定义的样式并传入实参,这样写实参要与形参顺序一致</span></span><br><span class="line">    <span class="selector-class">.hello</span>(<span class="variable">@mycolor</span>:<span class="number">#bfa</span>,<span class="variable">@w</span>:<span class="number">100px</span>)<span class="comment">//指定参数名传参，实参形参顺序无要求</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以给形参指定默认值。当使用时没有传实参时，该形参的值就为默认值：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.hello</span>(<span class="variable">@w</span>:<span class="number">10px</span>,<span class="variable">@mycolor</span>:<span class="number">#fff</span>)&#123;  <span class="comment">//指定变量@w的默认值是10px，变量@mycolor的默认值是#fff</span></span><br><span class="line">    <span class="attribute">width</span>:<span class="variable">@w</span>;</span><br><span class="line">    height:$width;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="variable">@mycolor</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="selector-class">.hello</span>();  <span class="comment">//不传递实参，就使用默认值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//编译结果：</span></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>extend()  可以将其他的选择器上的样式，扩展到当前的选择器上。和Mixins不同，Mixins是全部复制，而extend()是通过选择器分组的形式来对样式进行扩展。(元素选择器也行)</li>
+</ul>
+<p>语法    选择器:extend(被扩展的选择器){该元素中独有的样式}</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;        </span><br><span class="line">    ...</span><br><span class="line">    <span class="selector-class">.box2</span>&#123;...&#125;  </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box3</span><span class="selector-pseudo">:extend(.box1)</span>&#123;<span class="comment">/*box3独有的样式*/</span>&#125;</span><br><span class="line"><span class="comment">//以上less编译出的css的结果是：</span></span><br><span class="line"><span class="selector-class">.box1</span>,<span class="selector-class">.box3</span>&#123;...&#125;</span><br><span class="line"><span class="selector-class">.box1</span> <span class="selector-class">.box2</span>&#123;...&#125;</span><br><span class="line"><span class="selector-class">.box3</span>&#123;<span class="comment">/*box3独有的样式*/</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>可在extend()中使用all，将所有含有box1的都扩展：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;        </span><br><span class="line">    ...</span><br><span class="line">    <span class="selector-class">.box2</span>&#123;...&#125;  </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box3</span><span class="selector-pseudo">:extend(.box1</span> <span class="keyword">all</span>)&#123;<span class="comment">/*box3独有的样式*/</span>&#125;</span><br><span class="line"><span class="comment">//以上less编译出的css的结果是：</span></span><br><span class="line"><span class="selector-class">.box1</span>,<span class="selector-class">.box3</span>&#123;...&#125;</span><br><span class="line"><span class="selector-class">.box1</span> <span class="selector-class">.box2</span>,<span class="selector-class">.box3</span> <span class="selector-class">.box2</span>&#123;...&#125;</span><br><span class="line"><span class="selector-class">.box3</span>&#123;<span class="comment">/*box3独有的样式*/</span>&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>&amp;  表示外层选择器</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box1</span>&#123;</span><br><span class="line">    <span class="selector-tag">&amp;</span>&#123;...&#125; <span class="comment">//&amp; 代表 .box1</span></span><br><span class="line">    <span class="selector-class">.box2</span>&#123;</span><br><span class="line">        <span class="selector-tag">&amp;</span>&#123;...&#125;<span class="comment">//&amp; 代表 .box2</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box3</span> <span class="selector-class">.box4</span>&#123;</span><br><span class="line">    <span class="selector-tag">&amp;</span>&#123;...&#125; <span class="comment">//&amp; 代表 .box3 .box4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以用&amp;实现子元素选择器：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">ul</span>&#123;</span><br><span class="line">    <span class="selector-tag">&amp;</span>&gt;<span class="selector-tag">li</span>&#123;...&#125;  <span class="comment">//相当于  ul&gt;li&#123;...&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>import 导入。可以把外部的less文件中的代码，导入到当前的less文件中</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;外部less文件路径/less文件名.less&quot;</span>；<span class="comment">//less文件后缀 .less 可以不写</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>darken(颜色，百分度)  函数。用于加深颜色。把指定颜色加深指定的百分度：</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">//把背景颜色黄色加深20%</span></span><br><span class="line"><span class="attribute">background-color</span>:darken(yellow,<span class="number">20%</span>);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>前端基础笔记</category>
@@ -1649,13 +1784,11 @@
     <content><![CDATA[<ol>
 <li><p>京东首页导航栏练习</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">        *&#123;</span><br><span class="line">            padding: 0;</span><br><span class="line">            margin: 0;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.nav</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">width</span><span class="selector-pseudo">:800px</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">margin</span><span class="selector-pseudo">:25px</span> <span class="selector-tag">auto</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.nav_list</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">list-style</span><span class="selector-pseudo">:none</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.nav_list</span> <span class="selector-tag">li</span>&#123;</span></span><br><span class="line">            float: left;</span><br><span class="line"><span class="css">            <span class="selector-tag">margin</span><span class="selector-pseudo">:0px</span> 12<span class="selector-tag">px</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.nav_list</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span>&#123;</span></span><br><span class="line">            text-decoration: none;</span><br><span class="line">            font-size: 15px;</span><br><span class="line"><span class="css">            <span class="selector-tag">color</span>: <span class="selector-id">#333</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.nav_list</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">color</span>:<span class="selector-id">#c81623</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.nav_list</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span> <span class="selector-tag">b</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">color</span><span class="selector-pseudo">:red</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav_list&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>秒杀<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span>优惠劵<span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>PLUS会员<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>品牌闪购<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>拍卖<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>京东家电<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>京东超市<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>京东生鲜<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>京东国际<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>京东金融<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/18/%E6%B5%AE%E5%8A%A8%E7%BB%83%E4%B9%A0/jdnav.png" class="" title="jdNav exercise"></p>
 <a id="more"></a>
 </li>
 <li><p>w3school首页导航栏练习</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">HTML</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="comment">/*清除默认样式*/</span></span></span><br><span class="line">        *&#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.nav</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">width</span><span class="selector-pseudo">:1164px</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">height</span><span class="selector-pseudo">:50px</span>;</span></span><br><span class="line">            margin: 120px auto;</span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#E8E7E3</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.nav_list</span>&#123;</span></span><br><span class="line">            list-style: none;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.nav_list</span> <span class="selector-tag">li</span>&#123;</span></span><br><span class="line">            float: left;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.nav_list</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">color</span>: <span class="selector-id">#898988</span>;</span></span><br><span class="line">            text-decoration: none;</span><br><span class="line">            font-size: 18px;</span><br><span class="line">            display: block;</span><br><span class="line">            padding: 15px 36px 11px 36px;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.nav_list</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">color</span>:<span class="selector-id">#E8E7E3</span>;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">background-color</span>: <span class="selector-id">#3F3F3F</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;nav&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav_list&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>HTML/CSS<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Browser Side<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Server Side<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Programming<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>XML<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Web Building<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Reference<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/18/%E6%B5%AE%E5%8A%A8%E7%BB%83%E4%B9%A0/w3schoolnav.png" class="" title="w3school exercise"></p>
 </li>
 </ol>

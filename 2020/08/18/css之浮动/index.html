@@ -213,7 +213,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -347,7 +347,6 @@
 </li>
 <li><p>文字不会被浮动元素遮挡，会环绕浮动元素。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-class">.box1</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">float</span>: left;</span><br><span class="line">        <span class="attribute">background-color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.box2</span>&#123;</span><br><span class="line">        <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;box2&quot;&gt;</span><br><span class="line">        &lt;p&gt;江户时代末期，被称为“天人”的异星人来袭。地球人与天人之间的战争瞬即爆发，为数众多的武士和攘夷派志士都参与与天人的战斗。幕府见识到天人强大的实力后，擅自与天人签订不平等条约，准许他们入国。其后更颁布了“废刀令”，夺走了武士的刀。自此，天人横行霸道，幕府成为了“傀儡政权”。在这样的时代，有一个武士与同伴愉快地过着异想天开的生活。&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
-
 <p>效果：<img src="/2020/08/18/css%E4%B9%8B%E6%B5%AE%E5%8A%A8/%E6%96%87%E5%AD%97%E4%B8%8E%E6%B5%AE%E5%8A%A8.png" class="" title="float example"></p>
 <p><em>我们可以利用浮动来实现一个文字环绕图片的效果。</em></p>
 </li>
@@ -372,7 +371,7 @@
 <li>将元素的overflow设置为非visible的值。（目前最完美的方式）visible:auto/hidden；（overflow详见<a href="/2020/08/16/css%E4%B9%8B%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%AD%89/" title="css之盒子模型、边框、内外边距">css之盒子模型、边框、内外边距</a>）</li>
 </ol>
 <p><em>总结：可以通过overflow:hidden来开启元素的BFC，从而解决子元素浮动父元素高度塌陷的问题。（谁塌，谁的overflow设置为hidden）</em></p>
-<ol start="4">
+<ol>
 <li>用clear属性清除浮动。（目前最完美的方式）</li>
 </ol>
 </li>
@@ -391,17 +390,14 @@
 <li>用伪类解决父子元素相邻垂直外边距传递</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>用伪类解决子元素浮动，父元素高度塌陷问题</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">display</span>:block;<span class="comment">/*伪元素默认为行内元素，要设置成块元素才行*/</span></span><br><span class="line">    <span class="attribute">clear</span>:both;<span class="comment">/*清除浮动*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>将以上两个写在一起，使该类能同时解决垂直外边距传递和高度塌陷问题。</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span>,<span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;<span class="comment">/*只有display为table时可以解决外边距的问题，而table形式也可解决高度塌陷的问题，所以这里display设置为table*/</span></span><br><span class="line">    <span class="attribute">clear</span>:both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>谁塌谁加clearfix类；谁被传递了垂直外边距谁加clearfix类。（一般都是父元素。）</p>
 </li>
 </ul>
@@ -518,6 +514,8 @@
 
 
 
+
+  
 
   
 

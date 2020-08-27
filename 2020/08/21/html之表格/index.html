@@ -211,7 +211,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -332,7 +332,6 @@
 </li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>1.1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>1.2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>2.1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>2.2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>横向合并单元格  colspan</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">colspan</span>=<span class="string">&quot;2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="comment">&lt;!--这个单元格就占据2个横向单元格的位置--&gt;</span></span><br></pre></td></tr></table></figure>
@@ -356,7 +355,6 @@
 <li><p>运用表格，使子块元素在父元素中垂直居中</p>
 <p>在表格的td中,运用<code>vertical-align:middle</code>使子元素居中很有效。但在div中，用该属性让元素居中就不行。所以在父元素中运用<code>display:table-cell</code>，将父元素的显示方式改编为单元格，然后再用vertical-align使子元素居中。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-class">.father_box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: yellow;</span><br><span class="line">    <span class="comment">/*改变父元素显示方式:让div以表格单元格的方式显示*/</span></span><br><span class="line">    <span class="attribute">display</span>: table-cell;</span><br><span class="line">    <span class="comment">/*让子元素垂直居中*/</span></span><br><span class="line">    <span class="attribute">vertical-align</span>:middle;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son_box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:green;</span><br><span class="line">    <span class="comment">/*子元素相对于父元素水平居中*/</span></span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0px</span> auto;</span><br><span class="line">&#125;</span><br><span class="line">&lt;div class=&quot;father_box&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;son_box&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
 <p><b>注意：在表格td中，或将display设置为table-cell时，margin会失效，但依旧可用padding</b></p>
 </li>
 </ul>
@@ -473,6 +471,8 @@
 
 
 
+
+  
 
   
 

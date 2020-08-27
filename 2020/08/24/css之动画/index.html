@@ -211,7 +211,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -312,9 +312,7 @@
 <ul>
 <li><p>@keyframes   用来设置关键帧</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 关键帧名称 &#123;</span><br><span class="line">  <span class="comment">/* from指定动画开始的位置，相当于0%*/</span>  </span><br><span class="line">    <span class="selector-tag">from</span>&#123;&#125;</span><br><span class="line">    <span class="comment">/*to指定动画结束的位置，相当于100%*/</span></span><br><span class="line">    <span class="selector-tag">to</span>&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <a id="more"></a>
-
 <p>关键帧中用百分比指定动画每一时刻的位置：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 关键帧名称 &#123;</span><br><span class="line">    0%,50%&#123;&#125;</span><br><span class="line">    <span class="comment">/*to指定动画结束的位置，相当于100%*/</span></span><br><span class="line">    20%,100%&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -330,14 +328,12 @@
 </li>
 <li><p>animation-iteration-count  指定动画执行的次数  </p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*动画执行无限次,即动画循环执行*/</span></span><br><span class="line"><span class="selector-tag">animation-iteration-count</span><span class="selector-pseudo">:infinite</span>;</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 </li>
 </ul>
 <p>例子：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="keyword">@keyframes</span> a1 &#123;</span></span><br><span class="line">            from&#123;</span><br><span class="line">                background-position: 0 0;</span><br><span class="line">            &#125;</span><br><span class="line">            to&#123;</span><br><span class="line">                background-position: 1536px 0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-class">.box1</span>&#123;</span></span><br><span class="line">            height: 256px;</span><br><span class="line"><span class="css">            <span class="comment">/*calc()是一个可以计算px值的函数，要带单位*/</span></span></span><br><span class="line">            width: calc(1536px / 6);</span><br><span class="line">            background-image: url(./img/bg2.png);</span><br><span class="line">            animation-name: a1;</span><br><span class="line">            animation-duration: 5s;</span><br><span class="line">            animation-timing-function: steps(6,end);</span><br><span class="line">            animation-iteration-count: infinite;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>animation-play-state  动画的播放状态。可选值：<ul>
 <li>paused  动画暂停</li>
@@ -465,6 +461,8 @@
 
 
 
+
+  
 
   
 
