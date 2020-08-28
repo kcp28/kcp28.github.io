@@ -22,21 +22,23 @@
     var CONFIG = {"hostname":"kcp28.github.io","root":"/","scheme":"Pisces","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="opacity 和 rgba 都是css中可以设置透明度的属性。透明度都是0-1之间的小数。  rgba设置透明度  ：rgba(red,green,blue,透明度) 1background-color:rgba(12,23,12,.4);  opacity设置元素透明度  ：opacity:透明度 1opacity:.6;  不同：rgba（）只是一个透明的颜色；opacity设置的是元素的透">
+  <meta name="description" content="视口（viewport）浏览器中用于呈现网页的区域称为视口，视口通常不等于屏幕的大小。不同设备视口 大小不同，可以通过查看&lt;html&gt;元素的大小查看当前的视口大小。 css像素和物理像素在css中写的像素值都是css像素。 物理像素，也叫设备像素，就是屏幕的像素。像电脑、手机这些设备的屏幕都是由像素组成的，分辨率：1366*768 表示屏幕横向有1366个像素，纵向有768个像素。屏幕">
 <meta property="og:type" content="article">
-<meta property="og:title" content="opacity&amp;rgba">
-<meta property="og:url" content="https://kcp28.github.io/2020/08/19/opacity%E4%B8%8Ergba/index.html">
+<meta property="og:title" content="移动端页面">
+<meta property="og:url" content="https://kcp28.github.io/2020/08/28/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2/index.html">
 <meta property="og:site_name" content="&amp;">
-<meta property="og:description" content="opacity 和 rgba 都是css中可以设置透明度的属性。透明度都是0-1之间的小数。  rgba设置透明度  ：rgba(red,green,blue,透明度) 1background-color:rgba(12,23,12,.4);  opacity设置元素透明度  ：opacity:透明度 1opacity:.6;  不同：rgba（）只是一个透明的颜色；opacity设置的是元素的透">
+<meta property="og:description" content="视口（viewport）浏览器中用于呈现网页的区域称为视口，视口通常不等于屏幕的大小。不同设备视口 大小不同，可以通过查看&lt;html&gt;元素的大小查看当前的视口大小。 css像素和物理像素在css中写的像素值都是css像素。 物理像素，也叫设备像素，就是屏幕的像素。像电脑、手机这些设备的屏幕都是由像素组成的，分辨率：1366*768 表示屏幕横向有1366个像素，纵向有768个像素。屏幕">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-19T08:11:00.000Z">
-<meta property="article:modified_time" content="2020-08-19T09:30:01.430Z">
+<meta property="article:published_time" content="2020-08-28T05:35:16.000Z">
+<meta property="article:modified_time" content="2020-08-28T11:49:35.805Z">
 <meta property="article:author" content="Lxy">
+<meta property="article:tag" content="html">
 <meta property="article:tag" content="css">
+<meta property="article:tag" content="移动端">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://kcp28.github.io/2020/08/19/opacity%E4%B8%8Ergba/">
+<link rel="canonical" href="https://kcp28.github.io/2020/08/28/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2/">
 
 
 <script class="page-configurations">
@@ -49,7 +51,7 @@
   };
 </script>
 
-  <title>opacity&rgba | &</title>
+  <title>移动端页面 | &</title>
   
 
 
@@ -187,7 +189,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -199,6 +201,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E5%8F%A3%EF%BC%88viewport%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">视口（viewport）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#css%E5%83%8F%E7%B4%A0%E5%92%8C%E7%89%A9%E7%90%86%E5%83%8F%E7%B4%A0"><span class="nav-number">1.1.</span> <span class="nav-text">css像素和物理像素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vw%E5%8D%95%E4%BD%8D"><span class="nav-number">2.</span> <span class="nav-text">vw单位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E9%85%8D%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84%E6%96%B9%E5%BC%8F%E4%B9%8B%E4%B8%80VW%E9%80%82%E9%85%8D"><span class="nav-number">2.1.</span> <span class="nav-text">适配移动端的方式之一VW适配</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -260,7 +263,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kcp28.github.io/2020/08/19/opacity%E4%B8%8Ergba/">
+    <link itemprop="mainEntityOfPage" href="https://kcp28.github.io/2020/08/28/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -276,7 +279,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          opacity&rgba
+          移动端页面
         </h1>
 
         <div class="post-meta">
@@ -287,7 +290,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-08-19 16:11:00 / 修改时间：17:30:01" itemprop="dateCreated datePublished" datetime="2020-08-19T16:11:00+08:00">2020-08-19</time>
+              <time title="创建时间：2020-08-28 13:35:16 / 修改时间：19:49:35" itemprop="dateCreated datePublished" datetime="2020-08-28T13:35:16+08:00">2020-08-28</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -308,17 +311,33 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>opacity 和 rgba 都是css中可以设置透明度的属性。透明度都是0-1之间的小数。</p>
+        <h2 id="视口（viewport）"><a href="#视口（viewport）" class="headerlink" title="视口（viewport）"></a>视口（viewport）</h2><p>浏览器中用于呈现网页的区域称为视口，视口通常不等于屏幕的大小。不同设备视口 大小不同，可以通过查看<code>&lt;html&gt;</code>元素的大小查看当前的视口大小。</p>
+<h3 id="css像素和物理像素"><a href="#css像素和物理像素" class="headerlink" title="css像素和物理像素"></a>css像素和物理像素</h3><p>在css中写的像素值都是css像素。</p>
+<p>物理像素，也叫设备像素，就是屏幕的像素。像电脑、手机这些设备的屏幕都是由像素组成的，分辨率：1366*768 表示屏幕横向有1366个像素，纵向有768个像素。屏幕像素越大，也就是像素点越多，显示越清晰。</p>
+<a id="more"></a>
+<p>一般情况下，手机的像素点比电脑像素点要多。所以不同设备，1个像素的大小也可能不同。手机上1个像素的大小比电脑的要小。</p>
+<p>在pc端，1个css像素 对应 1个物理像素；在移动端，为了确保网页的正常显示，1个css像素 对应 多个 物理像素。由于不同品牌手机屏幕的物理分辨率不同，所以，css像素与物理像素的具体比例也不同。</p>
+<p>手机的默认视口是980，所以在移动端浏览pc端的页面体验是较差的。当开发移动端的页面时，我们需要将视口大小调整成完美视口大小，确保页面能够完美显示。完美视口大小=屏幕物理分辨率/像素比。不同设备完美视口大小也不同。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--设置视口大小，在开发移动端页面都要写--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">    width=device-width  将视口设置为完美视口大小。开发移动端必写</span></span><br><span class="line"><span class="comment">    initial-scale=1.0   初始化放大1倍，即不放大页面</span></span><br><span class="line"><span class="comment">    maximum-scale=1.0    最大的放大倍数：1倍。即不允许放大</span></span><br><span class="line"><span class="comment">    user-scalable=yes    是否允许用户放大：允许。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="vw单位"><a href="#vw单位" class="headerlink" title="vw单位"></a>vw单位</h2><p>1vw 表示 1% 的视口宽度。（移动端设备都行，pc端浏览器的兼容不好）vw取值范围：1-100</p>
 <ul>
-<li><p>rgba设置透明度  ：rgba(red,green,blue,透明度)</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-color:rgba(<span class="number">12</span>,<span class="number">23</span>,<span class="number">12</span>,<span class="number">.4</span>);</span><br></pre></td></tr></table></figure>
+<li><p>%(百分比) 单位是参考包含块来计算的</p>
 </li>
-<li><p>opacity设置元素透明度  ：opacity:透明度</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">opacity</span>:.<span class="number">6</span>;</span><br></pre></td></tr></table></figure>
+<li><p>vw  总是相对于视口计算</p>
 </li>
-<li><p>不同：rgba（）只是一个透明的颜色；opacity设置的是元素的透明度 ，opacity是让整个元素透明。（如rgba无法让图片透明，opacity可以让图片透明）</p>
+<li><p>1rem = 1 html的font-size</p>
 </li>
 </ul>
+<p>在进行网页设计时，设计图上以px为单位，而我们写css时需要用vw为单位，所以要进行一定的计算，适配移动端，保证元素的显示比例不变。</p>
+<h3 id="适配移动端的方式之一VW适配"><a href="#适配移动端的方式之一VW适配" class="headerlink" title="适配移动端的方式之一VW适配"></a>适配移动端的方式之一VW适配</h3><p>将html的font-size设置为5.3333vw。在其他地方用rem为单位。</p>
+<p>以设计图纸宽度为750px为例：</p>
+<p>设计图纸：750px    代表    100vw(100%视口大小)  ==&gt; 设计图上1px=100/750=0.13333vw</p>
+<p>元素在设计图上若是60px，则浏览器上的大小是60*0.13333vw</p>
+<p>可以设置html的font-size,然后用rem为单位来设置其他元素的大小。</p>
+<p>最初的想法：设置html的font-size为0.13333vw,即1rem=0.13333vw.当元素在设计图上是30px，则浏览器中是  30rem。</p>
+<p>由于font-size的最小值为12px，所以，需要放大font-size。让1rem代表设计图的40px，此时1rem=40*0.13333=5.3333vw</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.html</span>&#123;</span><br><span class="line">    <span class="comment">/*1rem=设计图上40px*/</span></span><br><span class="line">    <span class="attribute">font-size</span>:<span class="number">5.3333vw</span>;<span class="comment">/*在设置元素大小时，若设计图上元素大小是 a px,则设置的大小为：(a/40)rem;*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><b>在设置元素大小时，若设计图上元素大小是  a px,则设置的大小为：(a/40)rem;</b></p>
 
     </div>
 
@@ -328,21 +347,20 @@
 
       <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/html/" rel="tag"># html</a>
               <a href="/tags/css/" rel="tag"># css</a>
+              <a href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" rel="tag"># 移动端</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/08/19/css%E4%B9%8B%E5%AE%9A%E4%BD%8Dposition/" rel="prev" title="css之定位position">
-                  <i class="fa fa-chevron-left"></i> css之定位position
+                <a href="/2020/08/27/css%E4%B9%8B%E5%BC%B9%E6%80%A7%E7%9B%92/" rel="prev" title="css之弹性盒">
+                  <i class="fa fa-chevron-left"></i> css之弹性盒
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/08/19/css%E4%B9%8B%E5%AD%97%E4%BD%93/" rel="next" title="css之字体">
-                  css之字体 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>

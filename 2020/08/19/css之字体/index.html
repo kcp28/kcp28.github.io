@@ -22,16 +22,16 @@
     var CONFIG = {"hostname":"kcp28.github.io","root":"/","scheme":"Pisces","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="字体的分类（家族）  衬线字体  serif  字体宽度各异，有衬线 如：Times、宋体   无衬线字体  sans-serif  字体宽度各异，无衬线 如：Helvetica、Arial、微软雅黑   等宽字体  monospace 字体等宽一样，一般用于代码或表格 如：Courier New、Consolas">
+  <meta name="description" content="字体的分类（家族）衬线字体  serif 字体宽度各异，有衬线 如：Times、宋体  无衬线字体  sans-serif 字体宽度各异，无衬线 如：Helvetica、Arial、微软雅黑  等宽字体  monospace 字体等宽一样，一般用于代码或表格 如：Courier New、Consolas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css之字体">
 <meta property="og:url" content="https://kcp28.github.io/2020/08/19/css%E4%B9%8B%E5%AD%97%E4%BD%93/index.html">
 <meta property="og:site_name" content="&amp;">
-<meta property="og:description" content="字体的分类（家族）  衬线字体  serif  字体宽度各异，有衬线 如：Times、宋体   无衬线字体  sans-serif  字体宽度各异，无衬线 如：Helvetica、Arial、微软雅黑   等宽字体  monospace 字体等宽一样，一般用于代码或表格 如：Courier New、Consolas">
+<meta property="og:description" content="字体的分类（家族）衬线字体  serif 字体宽度各异，有衬线 如：Times、宋体  无衬线字体  sans-serif 字体宽度各异，无衬线 如：Helvetica、Arial、微软雅黑  等宽字体  monospace 字体等宽一样，一般用于代码或表格 如：Courier New、Consolas">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://kcp28.github.io/2020/08/19/css%E4%B9%8B%E5%AD%97%E4%BD%93/01.png">
 <meta property="article:published_time" content="2020-08-19T11:16:01.000Z">
-<meta property="article:modified_time" content="2020-08-21T01:55:52.869Z">
+<meta property="article:modified_time" content="2020-08-28T07:29:30.349Z">
 <meta property="article:author" content="Lxy">
 <meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
@@ -189,7 +189,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -201,6 +201,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E7%9A%84%E5%88%86%E7%B1%BB%EF%BC%88%E5%AE%B6%E6%97%8F%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">字体的分类（家族）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%AC%E7%BA%BF%E5%AD%97%E4%BD%93-serif"><span class="nav-number">1.1.</span> <span class="nav-text">衬线字体  serif</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E8%A1%AC%E7%BA%BF%E5%AD%97%E4%BD%93-sans-serif"><span class="nav-number">1.2.</span> <span class="nav-text">无衬线字体  sans-serif</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E5%AE%BD%E5%AD%97%E4%BD%93-monospace"><span class="nav-number">1.3.</span> <span class="nav-text">等宽字体  monospace</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#font-family"><span class="nav-number">2.</span> <span class="nav-text">font-family</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#font-face-%E7%94%A8%E8%BF%99%E7%A7%8D%E6%96%B9%E5%BC%8F%E6%B3%A8%E6%84%8F%E7%89%88%E6%9D%83"><span class="nav-number">3.</span> <span class="nav-text">font-face   (用这种方式注意版权)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E6%A0%87%E5%AD%97%E4%BD%93"><span class="nav-number">4.</span> <span class="nav-text">图标字体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E6%A0%87%E5%AD%97%E4%BD%93%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number">4.1.</span> <span class="nav-text">图标字体使用步骤：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iconfont-%E5%9B%BD%E5%86%85%E7%9A%84%E4%B8%80%E4%B8%AA%E5%9B%BE%E6%A0%87%E5%BA%93"><span class="nav-number">4.2.</span> <span class="nav-text">iconfont  国内的一个图标库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number">4.2.1.</span> <span class="nav-text">使用步骤：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#em%E5%8D%95%E4%BD%8D"><span class="nav-number">5.</span> <span class="nav-text">em单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rem%E5%8D%95%E4%BD%8D"><span class="nav-number">6.</span> <span class="nav-text">rem单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E9%AB%98-line-height"><span class="nav-number">7.</span> <span class="nav-text">行高 line-height</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87line-height%E6%9D%A5%E8%AE%BE%E7%BD%AE%E8%A1%8C%E9%AB%98%E3%80%82"><span class="nav-number">7.1.</span> <span class="nav-text">通过line-height来设置行高。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E9%87%8D-font-weight"><span class="nav-number">8.</span> <span class="nav-text">字重  font-weight</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#font-style"><span class="nav-number">9.</span> <span class="nav-text">font-style</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#font-variant"><span class="nav-number">10.</span> <span class="nav-text">font-variant</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#font"><span class="nav-number">11.</span> <span class="nav-text">font</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -213,7 +214,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -226,7 +227,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -295,7 +296,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-21 09:55:52" itemprop="dateModified" datetime="2020-08-21T09:55:52+08:00">2020-08-21</time>
+                <time title="修改时间：2020-08-28 15:29:30" itemprop="dateModified" datetime="2020-08-28T15:29:30+08:00">2020-08-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -316,65 +317,35 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <ul>
-<li><p>字体的分类（家族）</p>
-<ul>
-<li><p>衬线字体  serif</p>
-<ul>
+        <h2 id="字体的分类（家族）"><a href="#字体的分类（家族）" class="headerlink" title="字体的分类（家族）"></a>字体的分类（家族）</h2><h3 id="衬线字体-serif"><a href="#衬线字体-serif" class="headerlink" title="衬线字体  serif"></a>衬线字体  serif</h3><ul>
 <li>字体宽度各异，有衬线</li>
 <li>如：Times、宋体</li>
 </ul>
-</li>
-<li><p>无衬线字体  sans-serif</p>
-<ul>
+<h3 id="无衬线字体-sans-serif"><a href="#无衬线字体-sans-serif" class="headerlink" title="无衬线字体  sans-serif"></a>无衬线字体  sans-serif</h3><ul>
 <li>字体宽度各异，无衬线</li>
 <li>如：Helvetica、Arial、微软雅黑</li>
 </ul>
-</li>
-<li>等宽字体  monospace<ul>
+<h3 id="等宽字体-monospace"><a href="#等宽字体-monospace" class="headerlink" title="等宽字体  monospace"></a>等宽字体  monospace</h3><ul>
 <li>字体等宽一样，一般用于代码或表格</li>
 <li>如：Courier New、Consolas</li>
 </ul>
-</li>
-</ul>
 <a id="more"></a>
-</li>
-<li><p>font-family </p>
-<ul>
-<li>用来指定字体的家族，可以指定一个字体的分类，也可以指定一个特定的字体</li>
-</ul>
+<h2 id="font-family"><a href="#font-family" class="headerlink" title="font-family"></a>font-family</h2><p>用来指定字体的家族，可以指定一个字体的分类，也可以指定一个特定的字体</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:serif</span>;<span class="comment">/*指定一个字体的分类，不过这样不同浏览器可能有不同的效果*/</span></span><br><span class="line">font-family:&#x27;微软雅黑&#x27;;/*指定一个特定的字体*/</span><br></pre></td></tr></table></figure>
-<ul>
-<li>font-family 也可同时指定多个字体，各字体之间用 “  ，”隔开。</li>
-</ul>
+<p>font-family 也可同时指定多个字体，各字体之间用 “  ，”隔开。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font-family</span><span class="selector-pseudo">:Arial</span>,华文彩云,<span class="selector-tag">serif</span>;</span><br></pre></td></tr></table></figure>
 <p>​    只有当计算机安装了字体才可使用，指定多个字体则如果第一种字体电脑没有，用第二种字体；第二种字体没有，用第三个。等等，以此类推。</p>
-</li>
-<li><p>font-face   (用这种方式注意版权)</p>
-<ul>
-<li>font-face用来引入字体，使用户的计算机即使没有该字体，浏览器也能正常显示该字体。</li>
-</ul>
+<h2 id="font-face-用这种方式注意版权"><a href="#font-face-用这种方式注意版权" class="headerlink" title="font-face   (用这种方式注意版权)"></a>font-face   (用这种方式注意版权)</h2><p>font-face用来引入字体，使用户的计算机即使没有该字体，浏览器也能正常显示该字体。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span>&#123;</span><br><span class="line">    <span class="attribute">font-family</span>:<span class="string">&#x27;字体名称&#x27;</span>;<span class="comment">/*这个名称是自己起的*/</span></span><br><span class="line">    <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">&#x27;字体文件路径&#x27;</span>);<span class="comment">/*字体必需是本地的字体，在自己的服务器内*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后就可以在其他选择器中使用该字体：<code>font-family:&#39;字体名称&#39;;</code></p>
-</li>
-<li><p>图标字体</p>
-<p>图标字体使图标能像字体一样使用。Font Awesome 网站提供了许多图标字体。</p>
-<ul>
-<li>图标字体使用步骤：<ol>
+<h2 id="图标字体"><a href="#图标字体" class="headerlink" title="图标字体"></a>图标字体</h2><p>图标字体使图标能像字体一样使用。Font Awesome 网站提供了许多图标字体。</p>
+<h3 id="图标字体使用步骤："><a href="#图标字体使用步骤：" class="headerlink" title="图标字体使用步骤："></a>图标字体使用步骤：</h3><ol>
 <li>从官网下载。将下载的css和font文件夹放到项目目录中</li>
 <li>引入css文件：<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./css/font-awesome.min.css&quot;&gt;</code></li>
 </ol>
-</li>
-</ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 引入字体图标的css文件 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;./css/font-awesome.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 使用字体图标 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-camera-retro fa-lg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-lg</span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-camera-retro fa-2x&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-2x</span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-camera-retro fa-3x&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-3x</span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-camera-retro fa-4x&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-4x</span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-camera-retro fa-5x&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> fa-5x</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>字体图标可以像字体一样使用<code>font-size</code>设置字体大小，用<code>color</code>设置颜色。字体图标再放大也不会失真。</li>
-</ul>
-</li>
-<li><p>iconfont  国内的一个图标库</p>
-<ul>
-<li><p>使用步骤：</p>
-<ol>
+<p>字体图标可以像字体一样使用<code>font-size</code>设置字体大小，用<code>color</code>设置颜色。字体图标再放大也不会失真。</p>
+<h3 id="iconfont-国内的一个图标库"><a href="#iconfont-国内的一个图标库" class="headerlink" title="iconfont  国内的一个图标库"></a>iconfont  国内的一个图标库</h3><h4 id="使用步骤："><a href="#使用步骤：" class="headerlink" title="使用步骤："></a>使用步骤：</h4><ol>
 <li><p>在网站中选择要用的图标，把他们加入购物车  </p>
 </li>
 <li><p>在购物车中下载代码，把下载 的内容放到项目中。e</p>
@@ -395,64 +366,41 @@
 </ol>
 </li>
 </ol>
-</li>
-</ul>
-</li>
-<li><p>em单位</p>
-<ul>
-<li><p>em也是css中的一个单位。1em=1 font-size;可使用em，使容器大小随字体大小改变。</p>
+<h2 id="em单位"><a href="#em单位" class="headerlink" title="em单位"></a>em单位</h2><p>em也是css中的一个单位。1em=1 font-size;可使用em，使容器大小随字体大小改变。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>:<span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">2em</span>;<span class="comment">/*元素宽度是200px*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>rem单位</p>
-<ul>
-<li>rem也是css中的一个单位。  1rem=html的 1 font-size.(html的font-size默认是16px)</li>
-</ul>
-</li>
-</ul>
-<p><b>em相对于自己元素的字体大小；rem相对于根元素html的字体大小</b></p>
-<ul>
-<li><p>行高 line-height</p>
-<ul>
-<li><p>文本在网页中显示时，css会为每一个文本行都设置一个文本框，以容纳这些文字。行内元素是被内容撑开的，当文字只有一行时,撑起的高度就是行高。</p>
-</li>
-<li><p>通过line-height来设置行高。</p>
-<ul>
+<h2 id="rem单位"><a href="#rem单位" class="headerlink" title="rem单位"></a>rem单位</h2><p>rem也是css中的一个单位。  1rem=html的 1 font-size.</p>
+<p><b>em相对于自己元素的字体大小；rem相对于根元素<code>&lt;html&gt;</code>的字体大小</b></p>
+<p>注意：<b>html的font-size默认是16px；font-size最小是12px，若设置的字体大小小于12px，则浏览器自动将字体大小该成12px</b></p>
+<h2 id="行高-line-height"><a href="#行高-line-height" class="headerlink" title="行高 line-height"></a>行高 line-height</h2><p>文本在网页中显示时，css会为每一个文本行都设置一个文本框，以容纳这些文字。行内元素是被内容撑开的，当文字只有一行时,撑起的高度就是行高。</p>
+<h3 id="通过line-height来设置行高。"><a href="#通过line-height来设置行高。" class="headerlink" title="通过line-height来设置行高。"></a>通过line-height来设置行高。</h3><ul>
 <li><code>line-height:100px;</code>   指定行高有几像素</li>
 <li><code>line-height:1;</code>   指定行高等于几倍的字体大小(默认行高是字体大小的1.33倍)</li>
 </ul>
 <p>注意：行内元素不能设置宽高，它的背景高度默认是行高的字体大小的1.33倍，改变行高背景高度也不变。行内元素的border的高度，和背景高度一样默认是字体大小的1.33倍，且不会改变。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">    *&#123;</span><br><span class="line"><span class="css">        <span class="selector-tag">padding</span><span class="selector-pseudo">:0</span>;</span></span><br><span class="line">        margin: 0;</span><br><span class="line">    &#125;</span><br><span class="line">    div&#123;</span><br><span class="line">        width: 500px;</span><br><span class="line">        margin: 50px auto;</span><br><span class="line">    &#125;</span><br><span class="line">    span&#123;</span><br><span class="line">        font-size: 55px;</span><br><span class="line"><span class="css">        <span class="selector-tag">line-height</span><span class="selector-pseudo">:2</span>;</span></span><br><span class="line">        background-color: yellow;</span><br><span class="line">        border: 1px solid red;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">span</span>&gt;</span>这是一些文字<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>效果如图：（灰线是行高，红色是边框，黄色是背景）<img src="/2020/08/19/css%E4%B9%8B%E5%AD%97%E4%BD%93/01.png" class=""></p>
-</li>
+<ul>
 <li><p>文字基本是在行高中居中的（看起来有点偏下）。设置文字在父元素内垂直居中：将行高设置成父元素的高度。</p>
 </li>
 <li><p>通过行高可以设置行间距：行间距 = 行高 - 字体；</p>
 </li>
 </ul>
-</li>
-<li>字重  font-weight    字体是否加粗。可选值：<ul>
+<h2 id="字重-font-weight"><a href="#字重-font-weight" class="headerlink" title="字重  font-weight"></a>字重  font-weight</h2><p>字体是否加粗。可选值：</p>
+<ul>
 <li>100-900之间的值。值越大，字越粗.(注意：200比一定比100粗，也有肯和100一样；)</li>
 <li><code>font-weight:bold;</code>   直接设置字体加粗（常用）  bold相当于700（默认是normal，相当于400）</li>
 </ul>
-</li>
-<li>font-style   用来设置字体的样式(斜体)。可选值：<ul>
+<h2 id="font-style"><a href="#font-style" class="headerlink" title="font-style"></a>font-style</h2><p>用来设置字体的样式(斜体)。可选值：</p>
+<ul>
 <li>normal  默认 正常</li>
 <li>italic    斜体         oblique  倾斜</li>
 </ul>
-</li>
-<li>font-variant  字体变形。可选值：<ul>
-<li>small-caps  小型大写字母</li>
-</ul>
-</li>
-<li>font 字体简写属性，可以同时设置字体相关的所有样式。<ul>
+<h2 id="font-variant"><a href="#font-variant" class="headerlink" title="font-variant"></a>font-variant</h2><p>字体变形。可选值：small-caps  小型大写字母</p>
+<h2 id="font"><a href="#font" class="headerlink" title="font"></a>font</h2><p>字体简写属性，可以同时设置字体相关的所有样式。</p>
+<ul>
 <li>语法：(注意：前三个有无都行，且顺序随意。后两个必有，且顺序不变)</li>
 </ul>
-</li>
-</ul>
-<p><code>font:[font-weight] [font-style] [font-variant] font-size[/line-height] font-family;</code></p>
-<p>​            </p>
+<p><code>font:[font-weight] [font-style] [font-variant] font-size[/line-height] font-family;</code>​</p>
 
     </div>
 
