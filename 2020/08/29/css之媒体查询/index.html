@@ -22,25 +22,21 @@
     var CONFIG = {"hostname":"kcp28.github.io","root":"/","scheme":"Pisces","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="text-align  用来设置文本水平对齐方式。可选值：  left  默认  靠左对齐 right   靠右对齐 center   居中对齐 justify   两端对齐  通过调整空格大小，使得左右都对齐   vertical-align  设置文本垂直对齐方式。  可选值：  baseline   基线对齐  top    元素顶端与父元素顶端对齐  bottom    元素底部与父元素">
+  <meta name="description" content="1. 媒体查询（media query）通过媒体查询我们可以为不同的设备，不同的屏幕大小设置不同的样式。比如，根据视口的宽度，屏幕宽高比和和朝向等，来改变页面中元素的样式。 2. 媒体查询语法@media 查询条件{样式}">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css之文本样式">
-<meta property="og:url" content="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/index.html">
+<meta property="og:title" content="css之媒体查询">
+<meta property="og:url" content="https://kcp28.github.io/2020/08/29/css%E4%B9%8B%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/index.html">
 <meta property="og:site_name" content="&amp;">
-<meta property="og:description" content="text-align  用来设置文本水平对齐方式。可选值：  left  默认  靠左对齐 right   靠右对齐 center   居中对齐 justify   两端对齐  通过调整空格大小，使得左右都对齐   vertical-align  设置文本垂直对齐方式。  可选值：  baseline   基线对齐  top    元素顶端与父元素顶端对齐  bottom    元素底部与父元素">
+<meta property="og:description" content="1. 媒体查询（media query）通过媒体查询我们可以为不同的设备，不同的屏幕大小设置不同的样式。比如，根据视口的宽度，屏幕宽高比和和朝向等，来改变页面中元素的样式。 2. 媒体查询语法@media 查询条件{样式}">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/01.png">
-<meta property="og:image" content="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/02.png">
-<meta property="og:image" content="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/03.png">
-<meta property="article:published_time" content="2020-08-20T07:54:17.000Z">
-<meta property="article:modified_time" content="2020-08-20T08:58:30.035Z">
+<meta property="article:published_time" content="2020-08-29T04:30:25.000Z">
+<meta property="article:modified_time" content="2020-08-29T06:12:03.324Z">
 <meta property="article:author" content="Lxy">
 <meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/01.png">
 
 
-<link rel="canonical" href="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/">
+<link rel="canonical" href="https://kcp28.github.io/2020/08/29/css%E4%B9%8B%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/">
 
 
 <script class="page-configurations">
@@ -53,7 +49,7 @@
   };
 </script>
 
-  <title>css之文本样式 | &</title>
+  <title>css之媒体查询 | &</title>
   
 
 
@@ -191,7 +187,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -203,6 +199,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%EF%BC%88media-query%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">1. 媒体查询（media query）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">2. 媒体查询语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 查询条件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 媒体类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-%E5%AA%92%E4%BD%93%E5%8A%9F%E8%83%BD"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 媒体功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3 运算符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%96%AD%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">3. 断点</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -264,7 +261,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kcp28.github.io/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="https://kcp28.github.io/2020/08/29/css%E4%B9%8B%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -280,7 +277,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          css之文本样式
+          css之媒体查询
         </h1>
 
         <div class="post-meta">
@@ -291,7 +288,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-08-20 15:54:17 / 修改时间：16:58:30" itemprop="dateCreated datePublished" datetime="2020-08-20T15:54:17+08:00">2020-08-20</time>
+              <time title="创建时间：2020-08-29 12:30:25 / 修改时间：14:12:03" itemprop="dateCreated datePublished" datetime="2020-08-29T12:30:25+08:00">2020-08-29</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -312,88 +309,42 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <ul>
-<li><p>text-align  用来设置文本水平对齐方式。可选值：</p>
-<ul>
-<li>left  默认  靠左对齐</li>
-<li>right   靠右对齐</li>
-<li>center   居中对齐</li>
-<li>justify   两端对齐  通过调整空格大小，使得左右都对齐</li>
-</ul>
-</li>
-<li><p>vertical-align  设置文本垂直对齐方式。</p>
-<ul>
-<li><p>可选值：</p>
-<ul>
-<li><p>baseline   基线对齐</p>
-</li>
-<li><p>top    元素顶端与父元素顶端对齐</p>
-</li>
-<li><p>bottom    元素底部与父元素底部对齐</p>
-</li>
-<li><p>super  上标</p>
+        <h2 id="1-媒体查询（media-query）"><a href="#1-媒体查询（media-query）" class="headerlink" title="1. 媒体查询（media query）"></a>1. 媒体查询（media query）</h2><p>通过媒体查询我们可以为不同的设备，不同的屏幕大小设置不同的样式。比如，根据视口的宽度，屏幕宽高比和和朝向等，来改变页面中元素的样式。</p>
+<h2 id="2-媒体查询语法"><a href="#2-媒体查询语法" class="headerlink" title="2. 媒体查询语法"></a>2. 媒体查询语法</h2><p>@media 查询条件{样式}</p>
 <a id="more"></a>
-</li>
-<li><p>sub   下标</p>
-</li>
-<li><p>middle  居中对齐（这个有点向下）</p>
-</li>
-<li><p>数值  1.像素值   2.百分比（相对于行高计算）总之：正值往上调整，负值往下调整</p>
-</li>
+<h3 id="2-1-查询条件"><a href="#2-1-查询条件" class="headerlink" title="2.1 查询条件"></a>2.1 查询条件</h3><h4 id="2-1-1-媒体类型"><a href="#2-1-1-媒体类型" class="headerlink" title="2.1.1 媒体类型"></a>2.1.1 媒体类型</h4><ul>
+<li>all        适用于所有的设备,它里面的样式会应用于所有设备上</li>
+<li>print        适用于打印样式,它里面的样式会应用于打印样式上</li>
+<li>screen     适用于屏幕,它里面的样式会应用到屏幕上</li>
+<li>speech    适用于阅读器,它里面的样式会应用到阅读器上</li>
 </ul>
-</li>
-<li><p>用处：当一个div包一个img图片时，图片和div最下端不是紧挨着，会有个缝，这是由于图片默认是按字体基线对齐的方式对齐的,会把div撑高。想要去掉这个缝，法一：设置div中<code>font-size:0;</code> 法二：将图片垂直对齐设置为bottom<code>vertical-align:bottom;</code></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">    div&#123;</span><br><span class="line">        background-color: red;</span><br><span class="line"><span class="css">        <span class="selector-tag">border</span><span class="selector-pseudo">:1px</span> <span class="selector-tag">solid</span> <span class="selector-tag">blue</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line">    img&#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./bg.jpg&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>默认情况下，div和图片底部之间有个缝：<img src="/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/01.png" class="" title="有缝"></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid blue;</span><br><span class="line">    <span class="comment">/*设置字体大小为0，这样处理有风险，不建议*/</span></span><br><span class="line">    <span class="comment">/*font-size: 0px;*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">img</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="comment">/*给图片设置垂直对齐方式*/</span></span><br><span class="line">    <span class="attribute">vertical-align</span>: bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>设置垂直对齐方式后，没有缝了：<img src="/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/02.png" class="" title="没缝"></p>
-</li>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*媒体查询例子：*/</span></span><br><span class="line">@media screen,print&#123;/多个查询条件之间用 , 隔开/</span><br><span class="line">    <span class="selector-class">.box</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>:<span class="number">#bfa</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*一般媒体查询都会以only screen开头，表示仅仅对显示屏应用该样式。</span></span><br><span class="line"><span class="comment">only主要用于解决兼容性的问题：对于不支持媒体查询的浏览器，让它忽略媒体查询中设置的样式；让媒体查询中设置的样式只在支持媒体查询的浏览器中应用*/</span></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen&#123;<span class="comment">/*样式*/</span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-1-2-媒体功能"><a href="#2-1-2-媒体功能" class="headerlink" title="2.1.2 媒体功能"></a>2.1.2 媒体功能</h4><ul>
+<li>width、min-width、max-width   视口宽度（常用）</li>
+<li>height、min-height、max-height  视口高度（不常用）</li>
+<li>aspect-ratio  宽高比</li>
+<li>orientation  视口方向（portrait 纵向  landscape  横向）</li>
+<li>resolution  像素密度</li>
 </ul>
-</li>
-<li><p>text_decoration   设置文本修饰。语法：text_decoration: 类型  线形   颜色；</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*指定屏幕最小宽度，当 屏幕宽度&gt;=最小宽度 时应用样式  min &gt;=   max &lt;=*/</span></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span><span class="number">800px</span>)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-1-3-运算符"><a href="#2-1-3-运算符" class="headerlink" title="2.1.3 运算符"></a>2.1.3 运算符</h4><ul>
+<li>and  多个条件同时满足时应用样式</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*注意：and两边有空格*/</span></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width:</span><span class="number">800px</span>) <span class="keyword">and</span> (<span class="attribute">min-width:</span><span class="number">600px</span>)&#123;...&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>类型可选值：<ul>
-<li>underline   下划线</li>
-<li>line-through   删除线</li>
-<li>overline  上划线</li>
-<li>none  没有线</li>
+<li>​    ,    一个条件满足即可应用样式</li>
+<li>not  对所有结果取反，如果所有条件 都满足 则不应用样式（必须写在开头）</li>
 </ul>
-</li>
-<li>线形可选值：<ul>
-<li>solid  默认  实线</li>
-<li>double  双下划线</li>
-<li>dotted  点状线</li>
-<li>dashed  虚线</li>
-<li>wavy  波浪线</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>text-indent   首行缩进</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*not是对后面所有条件的整体结果取反。若后面条件成立，不应用样式；后面条件不成立，应用样式*/</span></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">not</span> sereen <span class="keyword">and</span> (<span class="attribute">orientation:</span>portrait)&#123;...&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><code>text-indent:40px;</code>  缩进40px   （正数向左缩进，负数向右缩进。也可用这种方式隐藏元素）</li>
-<li><code>text-indent:2em;</code>  缩进2个字</li>
+<li>only 只有新版浏览器才识别能识别的关键字，用于区分不支持的浏览器</li>
 </ul>
-</li>
-<li><p>white-space  如何处理空白内容。可选值：</p>
+<h2 id="3-断点"><a href="#3-断点" class="headerlink" title="3. 断点"></a>3. 断点</h2><p>断点，即屏幕变化的临界点，跨过这个点页面布局会发生显著的变化。</p>
 <ul>
-<li>normal   默认，正常自动换行</li>
-<li>nowrap  不换行</li>
-<li>pre   保留文本编辑时的格式（空格、换行都保留了）</li>
-</ul>
-</li>
-<li><p>text-overflow  如何处理溢出的文本。可选值：</p>
-<ul>
-<li>ellipsis   使用省略号来表示溢出内容</li>
-</ul>
-<p>容器一行显示不了所有字，设置字不换行，超出容器多余的部分用省略号表示：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">    p&#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        background-color: green;</span><br><span class="line"><span class="css">        <span class="comment">/*设置文字不换行*/</span></span></span><br><span class="line">        white-space: nowrap;</span><br><span class="line"><span class="css">        <span class="comment">/*隐藏溢出的内容*/</span></span></span><br><span class="line">        overflow: hidden;</span><br><span class="line"><span class="css">        <span class="comment">/*设置用省略号代替溢出文本*/</span></span></span><br><span class="line">        text-overflow: ellipsis;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这里有好多好多好多的字<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>效果：<img src="/2020/08/20/css%E4%B9%8B%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F/03.png" class=""></p>
-</li>
-<li><p>letter-spacing   字母间距   值越大，间距越大</p>
-</li>
-<li><p>word-spacing   单词间距    值越大，间距越大</p>
-</li>
+<li>超小屏幕        768以下</li>
+<li>小屏幕        &gt;=768</li>
+<li>中等屏幕        &gt;=992</li>
+<li>大屏幕        &gt;=1200</li>
 </ul>
 
     </div>
@@ -411,14 +362,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/08/19/css%E4%B9%8B%E5%AD%97%E4%BD%93/" rel="prev" title="css之字体">
-                  <i class="fa fa-chevron-left"></i> css之字体
+                <a href="/2020/08/28/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2/" rel="prev" title="移动端页面">
+                  <i class="fa fa-chevron-left"></i> 移动端页面
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/08/21/css%E4%B9%8B%E8%83%8C%E6%99%AF/" rel="next" title="css之背景">
-                  css之背景 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>

@@ -243,6 +243,54 @@
       </tags>
   </entry>
   <entry>
+    <title>css之媒体查询</title>
+    <url>/2020/08/29/css%E4%B9%8B%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/</url>
+    <content><![CDATA[<h2 id="1-媒体查询（media-query）"><a href="#1-媒体查询（media-query）" class="headerlink" title="1. 媒体查询（media query）"></a>1. 媒体查询（media query）</h2><p>通过媒体查询我们可以为不同的设备，不同的屏幕大小设置不同的样式。比如，根据视口的宽度，屏幕宽高比和和朝向等，来改变页面中元素的样式。</p>
+<h2 id="2-媒体查询语法"><a href="#2-媒体查询语法" class="headerlink" title="2. 媒体查询语法"></a>2. 媒体查询语法</h2><p>@media 查询条件{样式}</p>
+<a id="more"></a>
+<h3 id="2-1-查询条件"><a href="#2-1-查询条件" class="headerlink" title="2.1 查询条件"></a>2.1 查询条件</h3><h4 id="2-1-1-媒体类型"><a href="#2-1-1-媒体类型" class="headerlink" title="2.1.1 媒体类型"></a>2.1.1 媒体类型</h4><ul>
+<li>all        适用于所有的设备,它里面的样式会应用于所有设备上</li>
+<li>print        适用于打印样式,它里面的样式会应用于打印样式上</li>
+<li>screen     适用于屏幕,它里面的样式会应用到屏幕上</li>
+<li>speech    适用于阅读器,它里面的样式会应用到阅读器上</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*媒体查询例子：*/</span></span><br><span class="line">@media screen,print&#123;/多个查询条件之间用 , 隔开/</span><br><span class="line">    <span class="selector-class">.box</span>&#123;</span><br><span class="line">        <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">background-color</span>:<span class="number">#bfa</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*一般媒体查询都会以only screen开头，表示仅仅对显示屏应用该样式。</span></span><br><span class="line"><span class="comment">only主要用于解决兼容性的问题：对于不支持媒体查询的浏览器，让它忽略媒体查询中设置的样式；让媒体查询中设置的样式只在支持媒体查询的浏览器中应用*/</span></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen&#123;<span class="comment">/*样式*/</span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-1-2-媒体功能"><a href="#2-1-2-媒体功能" class="headerlink" title="2.1.2 媒体功能"></a>2.1.2 媒体功能</h4><ul>
+<li>width、min-width、max-width   视口宽度（常用）</li>
+<li>height、min-height、max-height  视口高度（不常用）</li>
+<li>aspect-ratio  宽高比</li>
+<li>orientation  视口方向（portrait 纵向  landscape  横向）</li>
+<li>resolution  像素密度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*指定屏幕最小宽度，当 屏幕宽度&gt;=最小宽度 时应用样式  min &gt;=   max &lt;=*/</span></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">min-width:</span><span class="number">800px</span>)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-1-3-运算符"><a href="#2-1-3-运算符" class="headerlink" title="2.1.3 运算符"></a>2.1.3 运算符</h4><ul>
+<li>and  多个条件同时满足时应用样式</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*注意：and两边有空格*/</span></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width:</span><span class="number">800px</span>) <span class="keyword">and</span> (<span class="attribute">min-width:</span><span class="number">600px</span>)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>​    ,    一个条件满足即可应用样式</li>
+<li>not  对所有结果取反，如果所有条件 都满足 则不应用样式（必须写在开头）</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*not是对后面所有条件的整体结果取反。若后面条件成立，不应用样式；后面条件不成立，应用样式*/</span></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">not</span> sereen <span class="keyword">and</span> (<span class="attribute">orientation:</span>portrait)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>only 只有新版浏览器才识别能识别的关键字，用于区分不支持的浏览器</li>
+</ul>
+<h2 id="3-断点"><a href="#3-断点" class="headerlink" title="3. 断点"></a>3. 断点</h2><p>断点，即屏幕变化的临界点，跨过这个点页面布局会发生显著的变化。</p>
+<ul>
+<li>超小屏幕        768以下</li>
+<li>小屏幕        &gt;=768</li>
+<li>中等屏幕        &gt;=992</li>
+<li>大屏幕        &gt;=1200</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端基础笔记</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css之字体</title>
     <url>/2020/08/19/css%E4%B9%8B%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<h2 id="字体的分类（家族）"><a href="#字体的分类（家族）" class="headerlink" title="字体的分类（家族）"></a>字体的分类（家族）</h2><h3 id="衬线字体-serif"><a href="#衬线字体-serif" class="headerlink" title="衬线字体  serif"></a>衬线字体  serif</h3><ul>
@@ -643,83 +691,6 @@
       </tags>
   </entry>
   <entry>
-    <title>css之渐变</title>
-    <url>/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/</url>
-    <content><![CDATA[<p>渐变不是颜色，是图片。我们需要通过 <code>background-image</code>或<code>background</code>设置渐变的效果。</p>
-<p>渐变有两种：1.linear-gradient() 线性渐变  2.radial-gradient() 径向渐变</p>
-<a id="more"></a>
-<ul>
-<li><p>linear-gradient 线性渐变</p>
-<ul>
-<li><p>语法：linear-gradient(角度，颜色 位置，颜色 位置，颜色 位置)</p>
-</li>
-<li><p>角度的值可以是top等，也可以上 度数(单位：deg)</p>
-<p>to bottom  或  180deg    自上向下（默认）</p>
-<p>to top  或  0deg    自下向上</p>
-<p>to left  或  90deg    自右向左</p>
-<p>to right     自左向右</p>
-<p>to right top  从左下到右上<br>to left bottom  从右上到左下…</p>
-<p><code>background-image:linear-gradient(red,yellow);</code></p>
-<p>默认情况，效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/1.png" class=""></p>
-<p><code>background-image:linear-gradient(to right top,red,yellow);</code></p>
-<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/2.png" class=""></p>
-<p><code>background-image:linear-gradient(65deg,red,yellow);</code></p>
-<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/3.png" class=""></p>
-</li>
-<li><p>默认情况下，渐变颜色是平均分配的。可以在颜色后，指定颜色的范围.语法： 开始位置  结束位置（注意这种语法兼容性不好）</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*0-20px位置颜色是red,80-100px是黄色，20-80px之间渐变*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 0 20<span class="selector-tag">px</span>,<span class="selector-tag">yellow</span> 80<span class="selector-tag">px</span> 100<span class="selector-tag">px</span>);</span><br></pre></td></tr></table></figure>
-<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/4.png" class=""></p>
-</li>
-<li><p>颜色后边可以指定一个长度(px或百分比)，用来指定颜色的起始位置：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*0-10px位置颜色是red,70px以下开始是黄色，10-70px之间渐变*/</span>  </span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 10<span class="selector-tag">px</span>,<span class="selector-tag">yellow</span> 70<span class="selector-tag">px</span>); </span><br></pre></td></tr></table></figure>
-<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/5.png" class="">          </p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*位置也可以是百分比，相对于该元素的高度*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 20%,<span class="selector-tag">yellow</span> 60%); </span><br></pre></td></tr></table></figure>
-<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/6.png" class=""></p>
-</li>
-<li><p>repeating-linear-gradient  重复现象渐变</p>
-<p><code>background-image:repeating-linear-gradient(red 10px,yellow 30px);</code></p>
-<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/7.png" class=""></p>
-</li>
-</ul>
-</li>
-<li><p>radial-gradient()  径向渐变</p>
-<p>该渐变默认上下左右对称。渐变默认形状是根据元素形状来的：元素是方块的，渐变是圆形的；元素是长方形，渐变是椭圆形的。</p>
-<p><code>background-image:radial-gradient(#abc,skyblue,blue);</code></p>
-<p>默认情况，效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/8.png" class=""></p>
-<ul>
-<li><p>设置渐变的形状：<br>设置圆形的径向渐变：<code>background-image:radial-gradient(circle,#abc,skyblue,blue);</code></p>
-<p>设置椭圆形的径向渐变：<code>background-image:radial-gradient(ellipse,#abc,skyblue,blue);</code><br>设置渐变的宽高(单位px):<code>background-image:radial-gradient(宽 高,#abc,skyblue,blue);</code></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(50px</span> 80<span class="selector-tag">px</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
-<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/9.png" class=""></p>
-</li>
-<li><p>设置渐变中心的位置：at 横向位置  垂直位置 （横向：top/bottom  垂直：left/center/right  也可以写具体的像素值）</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*渐变的中心在上方中间*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(at</span> <span class="selector-tag">top</span> <span class="selector-tag">center</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
-<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/10.png" class=""></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*渐变的中心距左边30px，距上边50px*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(at</span> 30<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
-<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/11.png" class=""></p>
-</li>
-<li><p>调整渐变的范围：</p>
-<p> closest-side:渐变的效果到离圆心最近的边<br> farthest-side:渐变的效果到离圆心最远的边<br> closest-corner:渐变到离圆心最近的角<br> farthest-corner:渐变的效果到离圆心最近的边</p>
-<p><code>background-image:radial-gradient(closest-side at 30px center,#abc,skyblue,blue);</code></p>
-<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/12.png" class="">       </p>
-</li>
-<li><p>重复的径向渐变，注意要设置渐变种各颜色的范围<br><code>background-image:repeating-radial-gradient(#abc 20%,skyblue 40%,blue 60%);</code></p>
-<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/13.png" class=""></p>
-</li>
-</ul>
-</li>
-<li><p>渐变和背景图片一样，可以用background-position改变位置</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>前端基础笔记</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>css之浮动</title>
     <url>/2020/08/18/css%E4%B9%8B%E6%B5%AE%E5%8A%A8/</url>
     <content><![CDATA[<ul>
@@ -805,6 +776,83 @@
 </ul>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span>,<span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">display</span>:table;<span class="comment">/*只有display为table时可以解决外边距的问题，而table形式也可解决高度塌陷的问题，所以这里display设置为table*/</span></span><br><span class="line">    <span class="attribute">clear</span>:both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>谁塌谁加clearfix类；谁被传递了垂直外边距谁加clearfix类。（一般都是父元素。）</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端基础笔记</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css之渐变</title>
+    <url>/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/</url>
+    <content><![CDATA[<p>渐变不是颜色，是图片。我们需要通过 <code>background-image</code>或<code>background</code>设置渐变的效果。</p>
+<p>渐变有两种：1.linear-gradient() 线性渐变  2.radial-gradient() 径向渐变</p>
+<a id="more"></a>
+<ul>
+<li><p>linear-gradient 线性渐变</p>
+<ul>
+<li><p>语法：linear-gradient(角度，颜色 位置，颜色 位置，颜色 位置)</p>
+</li>
+<li><p>角度的值可以是top等，也可以上 度数(单位：deg)</p>
+<p>to bottom  或  180deg    自上向下（默认）</p>
+<p>to top  或  0deg    自下向上</p>
+<p>to left  或  90deg    自右向左</p>
+<p>to right     自左向右</p>
+<p>to right top  从左下到右上<br>to left bottom  从右上到左下…</p>
+<p><code>background-image:linear-gradient(red,yellow);</code></p>
+<p>默认情况，效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/1.png" class=""></p>
+<p><code>background-image:linear-gradient(to right top,red,yellow);</code></p>
+<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/2.png" class=""></p>
+<p><code>background-image:linear-gradient(65deg,red,yellow);</code></p>
+<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/3.png" class=""></p>
+</li>
+<li><p>默认情况下，渐变颜色是平均分配的。可以在颜色后，指定颜色的范围.语法： 开始位置  结束位置（注意这种语法兼容性不好）</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*0-20px位置颜色是red,80-100px是黄色，20-80px之间渐变*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 0 20<span class="selector-tag">px</span>,<span class="selector-tag">yellow</span> 80<span class="selector-tag">px</span> 100<span class="selector-tag">px</span>);</span><br></pre></td></tr></table></figure>
+<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/4.png" class=""></p>
+</li>
+<li><p>颜色后边可以指定一个长度(px或百分比)，用来指定颜色的起始位置：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*0-10px位置颜色是red,70px以下开始是黄色，10-70px之间渐变*/</span>  </span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 10<span class="selector-tag">px</span>,<span class="selector-tag">yellow</span> 70<span class="selector-tag">px</span>); </span><br></pre></td></tr></table></figure>
+<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/5.png" class="">          </p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*位置也可以是百分比，相对于该元素的高度*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:linear-gradient(red</span> 20%,<span class="selector-tag">yellow</span> 60%); </span><br></pre></td></tr></table></figure>
+<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/6.png" class=""></p>
+</li>
+<li><p>repeating-linear-gradient  重复现象渐变</p>
+<p><code>background-image:repeating-linear-gradient(red 10px,yellow 30px);</code></p>
+<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/7.png" class=""></p>
+</li>
+</ul>
+</li>
+<li><p>radial-gradient()  径向渐变</p>
+<p>该渐变默认上下左右对称。渐变默认形状是根据元素形状来的：元素是方块的，渐变是圆形的；元素是长方形，渐变是椭圆形的。</p>
+<p><code>background-image:radial-gradient(#abc,skyblue,blue);</code></p>
+<p>默认情况，效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/8.png" class=""></p>
+<ul>
+<li><p>设置渐变的形状：<br>设置圆形的径向渐变：<code>background-image:radial-gradient(circle,#abc,skyblue,blue);</code></p>
+<p>设置椭圆形的径向渐变：<code>background-image:radial-gradient(ellipse,#abc,skyblue,blue);</code><br>设置渐变的宽高(单位px):<code>background-image:radial-gradient(宽 高,#abc,skyblue,blue);</code></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(50px</span> 80<span class="selector-tag">px</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
+<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/9.png" class=""></p>
+</li>
+<li><p>设置渐变中心的位置：at 横向位置  垂直位置 （横向：top/bottom  垂直：left/center/right  也可以写具体的像素值）</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*渐变的中心在上方中间*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(at</span> <span class="selector-tag">top</span> <span class="selector-tag">center</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
+<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/10.png" class=""></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*渐变的中心距左边30px，距上边50px*/</span></span><br><span class="line"><span class="selector-tag">background-image</span><span class="selector-pseudo">:radial-gradient(at</span> 30<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>,<span class="selector-id">#abc</span>,<span class="selector-tag">skyblue</span>,<span class="selector-tag">blue</span>);</span><br></pre></td></tr></table></figure>
+<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/11.png" class=""></p>
+</li>
+<li><p>调整渐变的范围：</p>
+<p> closest-side:渐变的效果到离圆心最近的边<br> farthest-side:渐变的效果到离圆心最远的边<br> closest-corner:渐变到离圆心最近的角<br> farthest-corner:渐变的效果到离圆心最近的边</p>
+<p><code>background-image:radial-gradient(closest-side at 30px center,#abc,skyblue,blue);</code></p>
+<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/12.png" class="">       </p>
+</li>
+<li><p>重复的径向渐变，注意要设置渐变种各颜色的范围<br><code>background-image:repeating-radial-gradient(#abc 20%,skyblue 40%,blue 60%);</code></p>
+<p>效果：<img src="/2020/08/26/css%E4%B9%8B%E6%B8%90%E5%8F%98/13.png" class=""></p>
+</li>
+</ul>
+</li>
+<li><p>渐变和背景图片一样，可以用background-position改变位置</p>
 </li>
 </ul>
 ]]></content>
