@@ -22,23 +22,23 @@
     var CONFIG = {"hostname":"kcp28.github.io","root":"/","scheme":"Pisces","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="视口（viewport）浏览器中用于呈现网页的区域称为视口，视口通常不等于屏幕的大小。不同设备视口 大小不同，可以通过查看&lt;html&gt;元素的大小查看当前的视口大小。 css像素和物理像素在css中写的像素值都是css像素。 物理像素，也叫设备像素，就是屏幕的像素。像电脑、手机这些设备的屏幕都是由像素组成的，分辨率：1366*768 表示屏幕横向有1366个像素，纵向有768个像素。屏幕">
+  <meta name="description" content="题目描述计算给定二叉树的所有左叶子之和 （题目难度：简单） 示例： 1234567    3   &#x2F; \  9  20    &#x2F;  \   15   7在这个二叉树中，有两个左叶子，分别是 9 和 15，所以返回 24">
 <meta property="og:type" content="article">
-<meta property="og:title" content="移动端页面">
-<meta property="og:url" content="https://kcp28.github.io/2020/08/28/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2/index.html">
+<meta property="og:title" content="404左叶子之和">
+<meta property="og:url" content="https://kcp28.github.io/2020/09/19/404%E5%B7%A6%E5%8F%B6%E5%AD%90%E4%B9%8B%E5%92%8C/index.html">
 <meta property="og:site_name" content="&amp;">
-<meta property="og:description" content="视口（viewport）浏览器中用于呈现网页的区域称为视口，视口通常不等于屏幕的大小。不同设备视口 大小不同，可以通过查看&lt;html&gt;元素的大小查看当前的视口大小。 css像素和物理像素在css中写的像素值都是css像素。 物理像素，也叫设备像素，就是屏幕的像素。像电脑、手机这些设备的屏幕都是由像素组成的，分辨率：1366*768 表示屏幕横向有1366个像素，纵向有768个像素。屏幕">
+<meta property="og:description" content="题目描述计算给定二叉树的所有左叶子之和 （题目难度：简单） 示例： 1234567    3   &#x2F; \  9  20    &#x2F;  \   15   7在这个二叉树中，有两个左叶子，分别是 9 和 15，所以返回 24">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-28T05:35:16.000Z">
-<meta property="article:modified_time" content="2020-08-28T11:49:35.805Z">
+<meta property="article:published_time" content="2020-09-19T02:54:17.000Z">
+<meta property="article:modified_time" content="2020-09-19T03:20:24.174Z">
 <meta property="article:author" content="Lxy">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="css">
-<meta property="article:tag" content="移动端">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="树">
+<meta property="article:tag" content="dns深度优先搜索">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://kcp28.github.io/2020/08/28/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2/">
+<link rel="canonical" href="https://kcp28.github.io/2020/09/19/404%E5%B7%A6%E5%8F%B6%E5%AD%90%E4%B9%8B%E5%92%8C/">
 
 
 <script class="page-configurations">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title>移动端页面 | &</title>
+  <title>404左叶子之和 | &</title>
   
 
 
@@ -201,7 +201,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%86%E5%8F%A3%EF%BC%88viewport%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">视口（viewport）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#css%E5%83%8F%E7%B4%A0%E5%92%8C%E7%89%A9%E7%90%86%E5%83%8F%E7%B4%A0"><span class="nav-number">1.1.</span> <span class="nav-text">css像素和物理像素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vw%E5%8D%95%E4%BD%8D"><span class="nav-number">2.</span> <span class="nav-text">vw单位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E9%85%8D%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84%E6%96%B9%E5%BC%8F%E4%B9%8B%E4%B8%80VW%E9%80%82%E9%85%8D"><span class="nav-number">2.1.</span> <span class="nav-text">适配移动端的方式之一VW适配</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E8%A7%A3%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">题目解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-c%E8%AF%AD%E8%A8%80"><span class="nav-number">3.</span> <span class="nav-text">代码(c语言)</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -263,7 +263,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://kcp28.github.io/2020/08/28/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2/">
+    <link itemprop="mainEntityOfPage" href="https://kcp28.github.io/2020/09/19/404%E5%B7%A6%E5%8F%B6%E5%AD%90%E4%B9%8B%E5%92%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -279,7 +279,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          移动端页面
+          404左叶子之和
         </h1>
 
         <div class="post-meta">
@@ -290,7 +290,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-08-28 13:35:16 / 修改时间：19:49:35" itemprop="dateCreated datePublished" datetime="2020-08-28T13:35:16+08:00">2020-08-28</time>
+              <time title="创建时间：2020-09-19 10:54:17 / 修改时间：11:20:24" itemprop="dateCreated datePublished" datetime="2020-09-19T10:54:17+08:00">2020-09-19</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -298,7 +298,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">前端基础笔记</span></a>
+                  <a href="/categories/leetcode%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">leetcode题</span></a>
                 </span>
             </span>
 
@@ -311,33 +311,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="视口（viewport）"><a href="#视口（viewport）" class="headerlink" title="视口（viewport）"></a>视口（viewport）</h2><p>浏览器中用于呈现网页的区域称为视口，视口通常不等于屏幕的大小。不同设备视口 大小不同，可以通过查看<code>&lt;html&gt;</code>元素的大小查看当前的视口大小。</p>
-<h3 id="css像素和物理像素"><a href="#css像素和物理像素" class="headerlink" title="css像素和物理像素"></a>css像素和物理像素</h3><p>在css中写的像素值都是css像素。</p>
-<p>物理像素，也叫设备像素，就是屏幕的像素。像电脑、手机这些设备的屏幕都是由像素组成的，分辨率：1366*768 表示屏幕横向有1366个像素，纵向有768个像素。屏幕像素越大，也就是像素点越多，显示越清晰。</p>
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>计算给定二叉树的所有左叶子之和</p>
+<p>（题目难度：简单）</p>
+<p><b>示例：</b></p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">    <span class="number">3</span></span><br><span class="line">   / \</span><br><span class="line">  <span class="number">9</span>  <span class="number">20</span></span><br><span class="line">    /  \</span><br><span class="line">   <span class="number">15</span>   <span class="number">7</span></span><br><span class="line"></span><br><span class="line">在这个二叉树中，有两个左叶子，分别是 <span class="number">9</span> 和 <span class="number">15</span>，所以返回 <span class="number">24</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>一般情况下，手机的像素点比电脑像素点要多。所以不同设备，1个像素的大小也可能不同。手机上1个像素的大小比电脑的要小。</p>
-<p>在pc端，1个css像素 对应 1个物理像素；在移动端，为了确保网页的正常显示，1个css像素 对应 多个 物理像素。由于不同品牌手机屏幕的物理分辨率不同，所以，css像素与物理像素的具体比例也不同。</p>
-<p>手机的默认视口是980，所以在移动端浏览pc端的页面体验是较差的。当开发移动端的页面时，我们需要将视口大小调整成完美视口大小，确保页面能够完美显示。完美视口大小=屏幕物理分辨率/像素比。不同设备完美视口大小也不同。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--设置视口大小，在开发移动端页面都要写--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">    width=device-width  将视口设置为完美视口大小。开发移动端必写</span></span><br><span class="line"><span class="comment">    initial-scale=1.0   初始化放大1倍，即不放大页面</span></span><br><span class="line"><span class="comment">    maximum-scale=1.0    最大的放大倍数：1倍。即不允许放大</span></span><br><span class="line"><span class="comment">    user-scalable=yes    是否允许用户放大：允许。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="vw单位"><a href="#vw单位" class="headerlink" title="vw单位"></a>vw单位</h2><p>1vw 表示 1% 的视口宽度。（移动端设备都行，pc端浏览器的兼容不好）vw取值范围：1-100</p>
-<ul>
-<li><p>%(百分比) 单位是参考包含块来计算的</p>
-</li>
-<li><p>vw  总是相对于视口计算</p>
-</li>
-<li><p>1rem = 1 html的font-size</p>
-</li>
-</ul>
-<p>在进行网页设计时，设计图上以px为单位，而我们写css时需要用vw为单位，所以要进行一定的计算，适配移动端，保证元素的显示比例不变。</p>
-<h3 id="适配移动端的方式之一VW适配"><a href="#适配移动端的方式之一VW适配" class="headerlink" title="适配移动端的方式之一VW适配"></a>适配移动端的方式之一VW适配</h3><p>将html的font-size设置为5.3333vw。在其他地方用rem为单位。</p>
-<p>以设计图纸宽度为750px为例：</p>
-<p>设计图纸：750px    代表    100vw(100%视口大小)  ==&gt; 设计图上1px=100/750=0.13333vw</p>
-<p>元素在设计图上若是60px，则浏览器上的大小是60*0.13333vw</p>
-<p>可以设置html的font-size,然后用rem为单位来设置其他元素的大小。</p>
-<p>最初的想法：设置html的font-size为0.13333vw,即1rem=0.13333vw.当元素在设计图上是30px，则浏览器中是  30rem。</p>
-<p>由于font-size的最小值为12px，所以，需要放大font-size。让1rem代表设计图的40px，此时1rem=40*0.13333=5.3333vw</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.html</span>&#123;</span><br><span class="line">    <span class="comment">/*1rem=设计图上40px*/</span></span><br><span class="line">    <span class="attribute">font-size</span>:<span class="number">5.3333vw</span>;<span class="comment">/*在设置元素大小时，若设计图上元素大小是 a px,则设置的大小为：(a/40)rem;*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><b>在设置元素大小时，若设计图上元素大小是  a px,则设置的大小为：(a/40)rem;</b></p>
+<h2 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h2><p>左叶子：首先，该节点是其父节点的左孩子。并且，该节点是一个叶子节点，即没有左右孩子。</p>
+<p>思路：运用深度优先。若树为空树或只有一个根节点则返回0。否则，判断当前节点是否有左孩子。若有，则判断左孩子是否是叶子节点，是叶子则加上孩子节点的值，否则加上左孩子为根的子树的左叶子之和。左子树计算完后，加上右子树的左叶子之和。</p>
+<h2 id="代码-c语言"><a href="#代码-c语言" class="headerlink" title="代码(c语言)"></a>代码(c语言)</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     struct TreeNode *right;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">//判断是否是叶子节点</span></span><br><span class="line"><span class="keyword">int</span> isLeaves(struct TreeNode* node)&#123;</span><br><span class="line">    <span class="keyword">if</span>(node-&gt;left==<span class="literal">NULL</span>&amp;&amp;node-&gt;right==<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;<span class="comment">//是 返回1</span></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//不是 返回0</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//深度优先计算左叶子之和</span></span><br><span class="line"><span class="keyword">int</span> dns(struct TreeNode* node)&#123;</span><br><span class="line">    <span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(node-&gt;left!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="comment">//判断该节点的左孩子节点是否是叶子节点</span></span><br><span class="line">        <span class="keyword">if</span>(isLeaves(node-&gt;left))&#123;</span><br><span class="line">        <span class="comment">//是左叶子，加上左叶子节点的值</span></span><br><span class="line">            ans+=node-&gt;left-&gt;val;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//不是左叶子，递归计算当前节点的左子树的左叶子之和，并加上</span></span><br><span class="line">            ans+=dns(node-&gt;left);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//计算并加上当前节点的右子树的左叶子之和</span></span><br><span class="line">    <span class="keyword">if</span>(node-&gt;right!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        ans+=dns(node-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//计算整棵树的左叶子之和</span></span><br><span class="line"><span class="keyword">int</span> sumOfLeftLeaves(struct TreeNode* root)&#123;</span><br><span class="line"><span class="comment">//若是空树，返回0</span></span><br><span class="line">    <span class="keyword">return</span> !root?<span class="number">0</span>:dns(root);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -347,23 +328,20 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/html/" rel="tag"># html</a>
-              <a href="/tags/css/" rel="tag"># css</a>
-              <a href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" rel="tag"># 移动端</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/%E6%A0%91/" rel="tag"># 树</a>
+              <a href="/tags/dns%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/" rel="tag"># dns深度优先搜索</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/08/27/css%E4%B9%8B%E5%BC%B9%E6%80%A7%E7%9B%92/" rel="prev" title="css之弹性盒">
-                  <i class="fa fa-chevron-left"></i> css之弹性盒
+                <a href="/2020/08/29/css%E4%B9%8B%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/" rel="prev" title="css之媒体查询">
+                  <i class="fa fa-chevron-left"></i> css之媒体查询
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/08/29/css%E4%B9%8B%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/" rel="next" title="css之媒体查询">
-                  css之媒体查询 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
